@@ -4,14 +4,14 @@
 
 // all the miners in nashkel mines 1 leave after speaking
 // we need 'em to stick around, so...
-REPLACE_ACTION_TEXT ~%tutu_var%BOB~    ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%CORY~   ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%DILOK~  ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%DINK~   ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%GORD~   ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%LESLEY~ ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%MARVIN~ ~EscapeArea()~ ~~
-REPLACE_ACTION_TEXT ~%tutu_var%RUFFIE~ ~EscapeArea()~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%BOB~    ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%CORY~   ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%DILOK~  ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%DINK~   ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%GORD~   ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%LESLEY~ ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%MARVIN~ ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
+REPLACE_ACTION_TEXT ~%tutu_var%RUFFIE~ ~\(EscapeArea()\|EscapeAreaDestroy([0-9]+)\)~ ~~
 
 // change branching on bob so questions can be asked
 EXTEND_BOTTOM ~%tutu_var%BOB~ 0
@@ -202,7 +202,7 @@ END
 /////                                                  \\\\\
 
 // largo and iris at priest
-CHAIN IF ~Global("CDBracerQuest","GLOBAL",80)~ THEN CDLARGO PriestNoHelp @1314 DO ~SetGlobal("CDBracerQuest","GLOBAL",19)~
+CHAIN IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",80)~ THEN CDLARGO PriestNoHelp @1314 DO ~SetGlobal("CDBracerQuest","GLOBAL",19)~
 == ~%tutu_var%ALVAHE~ @1315
 == CDLARGO @1316
 == ~%tutu_var%ALVAHE~ @1317
@@ -217,7 +217,7 @@ CHAIN IF ~~ THEN ~%tutu_var%THALAN~ Accepted @1008
 == ~%tutu_var%MELICA~ @1012
 == ~%tutu_var%THALAN~ @1013
 == ~%tutu_var%MELICA~ @1014
-== ~%tutu_var%THALAN~ @1015 DO ~SetGlobal("CDBracerQuest","GLOBAL",1)~
+== ~%tutu_var%THALAN~ @1015 DO ~SetGlobal("CDPlayerHasCalling","GLOBAL",1) AddJournalEntry(@1337,QUEST) SetGlobal("CDBracerQuest","GLOBAL",1)~
 EXIT
 
 // begin incantation
@@ -247,7 +247,8 @@ END ~%tutu_var%THALAN~ StartDiviningAlready
 CHAIN IF ~~ THEN CDMELI MeliLeaves @1125
 == CDMINER1 @1126
 == CDMINER2 @1127
-== CDMELI @1128 DO ~SetGlobalTimer("CDMelicampReturns","GLOBAL",FOUR_DAYS)
+== CDMELI @1128 DO ~AddJournalEntry(@1343,QUEST)
+                    SetGlobalTimer("CDMelicampReturns","GLOBAL",FOUR_DAYS)
                     SetGlobal("CDBracerQuest","GLOBAL",13)
                     ActionOverride("cdminer1",EscapeArea())
                     ActionOverride("cdminer2",EscapeArea())
@@ -257,50 +258,49 @@ EXIT
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ BeginIncantation @1258 = @1259
 == ~%tutu_var%MELICA~ @1260
 END
-  IF ~~ THEN REPLY @1265 GOTO Incantation2
-  IF ~~ THEN REPLY @1266 GOTO Incantation2
-  IF ~~ THEN REPLY @1267 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Incantation2
-  IF ~~ THEN REPLY @1268 GOTO Incantation2
-  IF ~~ THEN REPLY @1269 GOTO Incantation2
+  IF ~CheckStatLT(Player1,17,INT)~ THEN REPLY @1265 GOTO Incantation2
+  IF ~~                            THEN REPLY @1266 GOTO Incantation2
+  IF ~~                            THEN REPLY @1267 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Incantation2
+  IF ~CheckStatLT(Player1,17,WIS)~ THEN REPLY @1268 GOTO Incantation2
+  IF ~~                            THEN REPLY @1269 GOTO Incantation2
 
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ Incantation2 @1261
 == ~%tutu_var%MELICA~ @1262
 END
-  IF ~~ THEN REPLY @1265 GOTO Incantation3
-  IF ~~ THEN REPLY @1266 GOTO Incantation3
-  IF ~~ THEN REPLY @1267 GOTO Incantation3
-  IF ~~ THEN REPLY @1268 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Incantation3
-  IF ~~ THEN REPLY @1269 GOTO Incantation3
+  IF ~~                            THEN REPLY @1265 GOTO Incantation3
+  IF ~CheckStatLT(Player1,17,WIS)~ THEN REPLY @1266 GOTO Incantation3
+  IF ~CheckStatLT(Player1,17,INT)~ THEN REPLY @1267 GOTO Incantation3
+  IF ~~                            THEN REPLY @1268 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Incantation3
+  IF ~~                            THEN REPLY @1269 GOTO Incantation3
 
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ Incantation3 @1263
 == ~%tutu_var%MELICA~ @1264
 END
-  IF ~~ THEN REPLY @1265 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Behold
-  IF ~~ THEN REPLY @1266 GOTO Behold
-  IF ~~ THEN REPLY @1267 GOTO Behold
-  IF ~~ THEN REPLY @1268 GOTO Behold
-  IF ~~ THEN REPLY @1269 GOTO Behold
+  IF ~~                            THEN REPLY @1265 DO ~IncrementGlobal("CDIncantationRight","MYAREA",1)~ GOTO Behold
+  IF ~~                            THEN REPLY @1266 GOTO Behold
+  IF ~CheckStatLT(Player1,17,WIS)~ THEN REPLY @1267 GOTO Behold
+  IF ~~                            THEN REPLY @1268 GOTO Behold
+  IF ~CheckStatLT(Player1,17,INT)~ THEN REPLY @1269 GOTO Behold
 
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ IncantationSucked @1274
 == CDIRIS @1275
 == ~%tutu_var%THALAN~ @1276 = @1277
 == ~%tutu_var%MELICA~ @1278
-== ~%tutu_var%THALAN~ @1279 DO ~SetGlobal("CDBracerQuest","GLOBAL",22)~
+== ~%tutu_var%THALAN~ @1279
 EXIT
 
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ IncantationPoor @1280
 == CDIRIS @1275
 == ~%tutu_var%THALAN~ @1281 = @1282
 == ~%tutu_var%MELICA~ @1278
-== ~%tutu_var%THALAN~ @1279 DO ~SetGlobal("CDBracerQuest","GLOBAL",22)~
+== ~%tutu_var%THALAN~ @1279
 EXIT
 
 CHAIN IF ~~ THEN ~%tutu_var%THALAN~ IncantationGood @1283
 == CDIRIS @1284
 == ~%tutu_var%MELICA~ @1285
-== ~%tutu_var%THALAN~ @1286 = @1287 = @1288 DO ~SetGlobal("CDBracerQuest","GLOBAL",23)
-                                     GiveItemCreate("cdbracer",LastTalkedToBy(Myself),1,0,0)
-                                     GiveItemCreate("cdpowder",LastTalkedToBy(Myself),1,0,0)~
+== ~%tutu_var%THALAN~ @1286 = @1287 = @1288 DO ~GiveItemCreate("cdbracer",LastTalkedToBy(Myself),1,0,0)
+                                                GiveItemCreate("cdpowder",LastTalkedToBy(Myself),1,0,0)~
 EXIT
 
 /////                                                  \\\\\
@@ -334,9 +334,7 @@ APPEND CDLARGO
   END
   
   IF ~~ THEN BEGIN OuttaHere SAY @1222
-    IF ~~ THEN DO ~ActionOverride("cdiris",EscapeAreaMove("%Gullykin_Winery_L1%",311,230,12))
-                   SetGlobal("CDBracerQuest","GLOBAL",80)
-                   EscapeAreaMove("%Gullykin_Winery_L1%",388,262,6)~ EXIT
+    IF ~~ THEN DO ~AddJournalEntry(@1355,QUEST) SetGlobal("CDBracerQuest","GLOBAL",80)~ EXIT
   END
   
   IF ~~ THEN BEGIN ExtortionThreat SAY @1223
@@ -369,9 +367,8 @@ APPEND CDLARGO
   END
   
   IF ~~ THEN BEGIN HighHedge SAY @1237
-    IF ~~ THEN DO ~ActionOverride("cdiris",EscapeAreaMove("%HighHedge_ThalanthyrsAbode%",320,234,4))
-                   SetGlobal("CDBracerQuest","GLOBAL",19)
-                   EscapeAreaMove("%HighHedge_ThalanthyrsAbode%",384,225,4)~ EXIT
+    IF ~~ THEN DO ~AddJournalEntry(@1356,QUEST) SetGlobal("CDBracerQuest","GLOBAL",19)~ EXIT
+    IF ~Global("CDBracerQuest","GLOBAL",80)~ THEN DO ~AddJournalEntry(@1357,QUEST) SetGlobal("CDBracerQuest","GLOBAL",19)~ EXIT
   END
   
   IF ~~ THEN BEGIN Mage2 SAY @1238
@@ -620,15 +617,69 @@ END
 APPEND ~%tutu_var%TAEROM~
 
   IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",25)~ THEN BEGIN BracersGone SAY @1303
-    IF ~~ THEN DO ~SetGlobal("CDBracerQuest","GLOBAL",26)~ GOTO FinallyDone
-    IF ~Global("CDMakeBracers","MYAREA",1)~ THEN DO ~SetGlobal("CDBracerQuest","GLOBAL",26)~ GOTO HeresItem
+    IF ~~ THEN DO ~EraseJournalEntry(@1336)
+                   EraseJournalEntry(@1337)
+                   EraseJournalEntry(@1338)
+                   EraseJournalEntry(@1339)
+                   EraseJournalEntry(@1340)
+                   EraseJournalEntry(@1341)
+                   EraseJournalEntry(@1342)
+                   EraseJournalEntry(@1343)
+                   EraseJournalEntry(@1344)
+                   EraseJournalEntry(@1345)
+                   EraseJournalEntry(@1346)
+                   EraseJournalEntry(@1347)
+                   EraseJournalEntry(@1348)
+                   EraseJournalEntry(@1349)
+                   EraseJournalEntry(@1350)
+                   EraseJournalEntry(@1351)
+                   EraseJournalEntry(@1352)
+                   EraseJournalEntry(@1353)
+                   EraseJournalEntry(@1354)
+                   EraseJournalEntry(@1355)
+                   EraseJournalEntry(@1356)
+                   EraseJournalEntry(@1357)
+                   EraseJournalEntry(@1360)
+                   EraseJournalEntry(@1361)
+                   AddJournalEntry(@1362,QUEST_DONE)
+                   SetGlobal("CDBracerQuest","GLOBAL",26)~ GOTO FinallyDone
+    IF ~Global("CDMakeBracers","MYAREA",1)~ THEN DO ~EraseJournalEntry(@1336)
+                                                     EraseJournalEntry(@1337)
+                                                     EraseJournalEntry(@1338)
+                                                     EraseJournalEntry(@1339)
+                                                     EraseJournalEntry(@1340)
+                                                     EraseJournalEntry(@1341)
+                                                     EraseJournalEntry(@1342)
+                                                     EraseJournalEntry(@1343)
+                                                     EraseJournalEntry(@1344)
+                                                     EraseJournalEntry(@1345)
+                                                     EraseJournalEntry(@1346)
+                                                     EraseJournalEntry(@1347)
+                                                     EraseJournalEntry(@1348)
+                                                     EraseJournalEntry(@1349)
+                                                     EraseJournalEntry(@1350)
+                                                     EraseJournalEntry(@1351)
+                                                     EraseJournalEntry(@1352)
+                                                     EraseJournalEntry(@1353)
+                                                     EraseJournalEntry(@1354)
+                                                     EraseJournalEntry(@1355)
+                                                     EraseJournalEntry(@1356)
+                                                     EraseJournalEntry(@1357)
+                                                     EraseJournalEntry(@1360)
+                                                     EraseJournalEntry(@1361)
+                                                     AddJournalEntry(@1363,QUEST_DONE)
+                                                     SetGlobal("CDBracerQuest","GLOBAL",26)~ GOTO HeresItem
   END
 
   IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",11)
       GlobalTimerExpired("CDTaeromMakingDevice","GLOBAL")~ THEN BEGIN DeviceDone SAY @1185
-    IF ~~ THEN REPLY @1186 DO ~GiveItemCreate("cddevice",LastTalkedToBy(Myself),1,0,0)
+    IF ~~ THEN REPLY @1186 DO ~EraseJournalEntry(@1348)
+                               AddJournalEntry(@1349,QUEST)
+                               GiveItemCreate("cddevice",LastTalkedToBy(Myself),1,0,0)
                                SetGlobal("CDBracerQuest","GLOBAL",12)~ GOTO SeeYa
-    IF ~~ THEN REPLY @1187 DO ~GiveItemCreate("cddevice",LastTalkedToBy(Myself),1,0,0)
+    IF ~~ THEN REPLY @1187 DO ~EraseJournalEntry(@1348)
+                               AddJournalEntry(@1349,QUEST)
+                               GiveItemCreate("cddevice",LastTalkedToBy(Myself),1,0,0)
                                SetGlobal("CDBracerQuest","GLOBAL",12)
                                StartStore("%tutu_var%TAERUM",LastTalkedToBy(Myself))~ EXIT
   END
@@ -646,11 +697,13 @@ APPEND ~%tutu_var%TAEROM~
   END
   
   IF ~~ THEN BEGIN WheresMeli SAY @1102 = @1103
-    IF ~~ THEN DO ~SetGlobal("CDBracerQuest","GLOBAL",7)~ EXIT
+    IF ~~ THEN DO ~AddJournalEntry(@1341,QUEST) SetGlobal("CDBracerQuest","GLOBAL",7)~ EXIT
   END
   
   IF ~~ THEN BEGIN MakeDevice SAY @1181 = @1182 = @1183
-    IF ~~ THEN DO ~TakePartyItem("cdore")
+    IF ~~ THEN DO ~EraseJournalEntry(@1347)
+                   AddJournalEntry(@1348,QUEST)
+                   TakePartyItem("cdore")
                    DestroyItem("cdore")
                    SetGlobal("CDBracerQuest","GLOBAL",11)
                    SetGlobalTimer("CDTaeromMakingDevice","GLOBAL",TWO_DAYS)~ EXIT
@@ -694,16 +747,81 @@ END
 APPEND ~%tutu_var%THALAN~
 
   IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",21)~ THEN BEGIN IncantationFinished SAY @1272 = @1273
-    IF ~~ THEN DO ~AddexperienceParty(1000)~ GOTO IncantationSucked
-    IF ~Global("CDIncantationRight","MYAREA",1)~ THEN DO ~AddexperienceParty(2000)~ GOTO IncantationPoor
-    IF ~Global("CDIncantationRight","MYAREA",2)~ THEN DO ~AddexperienceParty(3000)~ GOTO IncantationGood
-    IF ~Global("CDIncantationRight","MYAREA",3)~ THEN DO ~AddexperienceParty(4000)~ GOTO IncantationGood
+    IF ~~                                        THEN DO ~EraseJournalEntry(@1336)
+                                                          EraseJournalEntry(@1337)
+                                                          EraseJournalEntry(@1338)
+                                                          EraseJournalEntry(@1339)
+                                                          EraseJournalEntry(@1340)
+                                                          EraseJournalEntry(@1341)
+                                                          EraseJournalEntry(@1342)
+                                                          EraseJournalEntry(@1343)
+                                                          EraseJournalEntry(@1344)
+                                                          EraseJournalEntry(@1345)
+                                                          EraseJournalEntry(@1346)
+                                                          EraseJournalEntry(@1347)
+                                                          EraseJournalEntry(@1348)
+                                                          EraseJournalEntry(@1349)
+                                                          EraseJournalEntry(@1350)
+                                                          EraseJournalEntry(@1351)
+                                                          EraseJournalEntry(@1352)
+                                                          EraseJournalEntry(@1353)
+                                                          EraseJournalEntry(@1354)
+                                                          EraseJournalEntry(@1355)
+                                                          EraseJournalEntry(@1356)
+                                                          EraseJournalEntry(@1357)
+                                                          AddJournalEntry(@1358,QUEST_DONE)
+                                                          SetGlobal("CDBracerQuest","GLOBAL",22) 
+                                                          AddexperienceParty(1000)~ GOTO IncantationSucked
+    IF ~Global("CDIncantationRight","MYAREA",1)~ THEN DO ~EraseJournalEntry(@1336)
+                                                          EraseJournalEntry(@1337)
+                                                          EraseJournalEntry(@1338)
+                                                          EraseJournalEntry(@1339)
+                                                          EraseJournalEntry(@1340)
+                                                          EraseJournalEntry(@1341)
+                                                          EraseJournalEntry(@1342)
+                                                          EraseJournalEntry(@1343)
+                                                          EraseJournalEntry(@1344)
+                                                          EraseJournalEntry(@1345)
+                                                          EraseJournalEntry(@1346)
+                                                          EraseJournalEntry(@1347)
+                                                          EraseJournalEntry(@1348)
+                                                          EraseJournalEntry(@1349)
+                                                          EraseJournalEntry(@1350)
+                                                          EraseJournalEntry(@1351)
+                                                          EraseJournalEntry(@1352)
+                                                          EraseJournalEntry(@1353)
+                                                          EraseJournalEntry(@1354)
+                                                          EraseJournalEntry(@1355)
+                                                          EraseJournalEntry(@1356)
+                                                          EraseJournalEntry(@1357)
+                                                          AddJournalEntry(@1359,QUEST_DONE)
+                                                          SetGlobal("CDBracerQuest","GLOBAL",22) 
+                                                          AddexperienceParty(2000)~ GOTO IncantationPoor
+    IF ~Global("CDIncantationRight","MYAREA",2)~ THEN DO ~AddJournalEntry(@1360,QUEST)
+                                                          SetGlobal("CDBracerQuest","GLOBAL",23) 
+                                                          AddexperienceParty(3000)~ GOTO IncantationGood
+    IF ~Global("CDIncantationRight","MYAREA",3)~ THEN DO ~AddJournalEntry(@1361,QUEST)
+                                                          SetGlobal("CDBracerQuest","GLOBAL",23) 
+                                                          AddexperienceParty(4000)~ GOTO IncantationGood
+  END
+
+  IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",12)
+                 PartyHasItem("cddevice")
+                 Global("CDDeviceBeforeMeli","GLOBAL",2)~ THEN BEGIN HeresDevice SAY @1334
+    IF ~~ THEN DO ~TakePartyItem("cddevice")
+                   DestroyItem("cddevice")
+                   SetGlobal("CDDeviceBeforeMeli","GLOBAL",3)~ GOTO StartDiviningAlready
   END
 
   IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",12)
                  PartyHasItem("cddevice")~ THEN BEGIN HeresDevice SAY @1189
-    IF ~~ THEN DO ~TakePartyItem("cddevice")
-                  DestroyItem("cddevice")~ GOTO StartDiviningAlready
+    IF ~~ THEN GOTO DivinationWaitForMeli
+    IF ~InMyArea("cdmeli")~ THEN DO ~TakePartyItem("cddevice")
+                                     DestroyItem("cddevice")~ GOTO StartDiviningAlready
+  END
+
+  IF ~~ THEN BEGIN DivinationWaitForMeli SAY @1333
+    IF ~~ THEN DO ~SetGlobal("CDDeviceBeforeMeli","GLOBAL",1)~ EXIT // force timer expiration immediately
   END
   
   IF ~~ THEN BEGIN StartDiviningAlready SAY @1190 = @1191
@@ -737,23 +855,23 @@ APPEND ~%tutu_var%THALAN~
   END
   
   IF ~~ THEN BEGIN DiviningSucks SAY @1203
-    IF ~~ THEN GOTO GoGetBracersAlready
+    IF ~~ THEN DO ~AddJournalEntry(@1350,QUEST)~ GOTO GoGetBracersAlready
   END
   
   IF ~~ THEN BEGIN DiviningPoor SAY @1204
-    IF ~~ THEN GOTO GoGetBracersAlready
+    IF ~~ THEN DO ~AddJournalEntry(@1351,QUEST)~ GOTO GoGetBracersAlready
   END
 
   IF ~~ THEN BEGIN DiviningFair SAY @1205
-    IF ~~ THEN GOTO GoGetBracersAlready
+    IF ~~ THEN DO ~AddJournalEntry(@1352,QUEST)~ GOTO GoGetBracersAlready
   END
 
   IF ~~ THEN BEGIN DiviningGood SAY @1206
-    IF ~~ THEN GOTO GoGetBracersAlready
+    IF ~~ THEN DO ~AddJournalEntry(@1353,QUEST)~ GOTO GoGetBracersAlready
   END
 
   IF ~~ THEN BEGIN DiviningPerfect SAY @1207
-    IF ~~ THEN GOTO GoGetBracersAlready
+    IF ~~ THEN DO ~AddJournalEntry(@1354,QUEST)~ GOTO GoGetBracersAlready
   END
 
   IF ~~ THEN BEGIN GoGetBracersAlready SAY @1208 = @1209 = @1210 = @1211
@@ -766,29 +884,29 @@ APPEND ~%tutu_var%THALAN~
   END
 
   IF ~~ THEN BEGIN CDBeginBracerQuest_mage SAY @1001
-    IF ~~ THEN REPLY @1002 DO ~SetGlobal("CDPlayerHasCalling","GLOBAL",1)~ GOTO Accepted
+    IF ~~ THEN REPLY @1002 GOTO Accepted
     IF ~~ THEN REPLY @1003 GOTO MoreInfo
-    IF ~~ THEN REPLY @1004 DO ~SetGlobal("CDBracerQuest","GLOBAL",98)~ GOTO Declined
+    IF ~~ THEN REPLY @1004 GOTO Declined
     IF ~~ THEN REPLY @1005 DO ~~ EXTERN ~%tutu_var%MELICA~ Cluckers
     IF ~~ THEN REPLY @1006 GOTO MoreInfo
   END
 
   IF ~~ THEN BEGIN CDBeginBracerQuest_notmage SAY @1320
-    IF ~~ THEN REPLY @1002 DO ~SetGlobal("CDPlayerHasCalling","GLOBAL",1)~ GOTO Accepted
+    IF ~~ THEN REPLY @1002 GOTO Accepted
     IF ~~ THEN REPLY @1003 GOTO MoreInfo
-    IF ~~ THEN REPLY @1004 DO ~SetGlobal("CDBracerQuest","GLOBAL",98)~ GOTO Declined
+    IF ~~ THEN REPLY @1004 GOTO Declined
     IF ~~ THEN REPLY @1005 DO ~~ EXTERN ~%tutu_var%MELICA~ Cluckers
     IF ~~ THEN REPLY @1006 GOTO MoreInfo
   END
 
   IF ~~ THEN BEGIN Declined SAY @1022
-    IF ~~ THEN EXIT
+    IF ~~ THEN DO ~AddJournalEntry(@1336,QUEST_DONE) SetGlobal("CDBracerQuest","GLOBAL",98)~ EXIT
   END
 
   IF ~~ THEN BEGIN MoreInfo SAY @1023 = @1024 = @1025
-    IF ~~ THEN REPLY @1027 DO ~SetGlobal("CDBracerQuest","GLOBAL",1)~ GOTO Accepted
-    IF ~~ THEN REPLY @1002 DO ~SetGlobal("CDPlayerHasCalling","GLOBAL",1)~ GOTO Accepted
-    IF ~~ THEN REPLY @1028 DO ~SetGlobal("CDBracerQuest","GLOBAL",98)~ GOTO Declined
+    IF ~~ THEN REPLY @1027 GOTO Accepted
+    IF ~~ THEN REPLY @1002 GOTO Accepted
+    IF ~~ THEN REPLY @1028 GOTO Declined
   END
   
   IF WEIGHT #-1 ~Global("CDBracerQuest","GLOBAL",2)~ THEN BEGIN QuestGivingPartI SAY @1016 = @1017
@@ -820,8 +938,10 @@ APPEND ~%tutu_var%THALAN~
   END
   
   IF ~~ THEN BEGIN OffIGo SAY @1032
-    IF ~~ THEN EXIT
+    IF ~Global("CDBlackPearls","GLOBAL",0)~  THEN DO ~AddJournalEntry(@1337,QUEST)~ EXIT
+    IF ~!Global("CDBlackPearls","GLOBAL",0)~ THEN DO ~AddJournalEntry(@1338,QUEST)~ EXIT
   END
+  
 /*  now handled as a dialogue reply in state 1
   IF WEIGHT #-1 ~GlobalGT("CDBracerQuest","GLOBAL",2)
                  GlobalLT("CDBracerQuest","GLOBAL",6)~ THEN BEGIN GemsGemsGems SAY @1033
@@ -831,13 +951,13 @@ APPEND ~%tutu_var%THALAN~
   END
 */  
   IF ~~ THEN BEGIN ForkEmOver SAY @1037
-    IF ~Global("misc22","LOCALS",0)
-        PartyHasItem("%tutu_var%misc22")~ THEN REPLY #7114 DO ~SetGlobal("misc22","LOCALS",1)
+    IF ~Global("cd_misc22","LOCALS",0)
+        PartyHasItem("%tutu_var%misc22")~ THEN REPLY #7114 DO ~SetGlobal("cd_misc22","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc22")
                                                       DestroyItem("%tutu_var%misc22")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // andar
-    IF ~Global("misc33","LOCALS",0)
-        PartyHasItem("%tutu_var%misc33")~ THEN REPLY #7130 DO ~SetGlobal("misc33","LOCALS",1)
+    IF ~Global("cd_misc33","LOCALS",0)
+        PartyHasItem("%tutu_var%misc33")~ THEN REPLY #7130 DO ~SetGlobal("cd_misc33","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc33")
                                                       DestroyItem("%tutu_var%misc33")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // aquamarine
@@ -849,143 +969,145 @@ APPEND ~%tutu_var%THALAN~
                                                       TakePartyItem("cdbpearl")
                                                       DestroyItem("cdbpearl")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",5)~ GOTO GemQ5 // black pearl
-    IF ~Global("misc38","LOCALS",0)
-        PartyHasItem("%tutu_var%misc38")~ THEN REPLY #7135 DO ~SetGlobal("misc38","LOCALS",1)
+    IF ~Global("cd_misc38","LOCALS",0)
+        PartyHasItem("%tutu_var%misc38")~ THEN REPLY #7135 DO ~SetGlobal("cd_misc38","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc38")
                                                       DestroyItem("%tutu_var%misc38")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // black opal
-    IF ~Global("misc20","LOCALS",0)
-        PartyHasItem("%tutu_var%misc20")~ THEN REPLY #7112 DO ~SetGlobal("misc20","LOCALS",1)
+    IF ~Global("cd_misc20","LOCALS",0)
+        PartyHasItem("%tutu_var%misc20")~ THEN REPLY #7112 DO ~SetGlobal("cd_misc20","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc20")
                                                       DestroyItem("%tutu_var%misc20")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // bloodstone
-    IF ~Global("misc30","LOCALS",0)
-        PartyHasItem("%tutu_var%misc30")~ THEN REPLY #7126 DO ~SetGlobal("misc30","LOCALS",1)
+    IF ~Global("cd_misc30","LOCALS",0)
+        PartyHasItem("%tutu_var%misc30")~ THEN REPLY #7126 DO ~SetGlobal("cd_misc30","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc30")
                                                       DestroyItem("%tutu_var%misc30")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // chrysoberyl
-    IF ~Global("misc42","LOCALS",0)
-        PartyHasItem("%tutu_var%misc42")~ THEN REPLY #7139 DO ~SetGlobal("misc42","LOCALS",1)
+    IF ~Global("cd_misc42","LOCALS",0)
+        PartyHasItem("%tutu_var%misc42")~ THEN REPLY #7139 DO ~SetGlobal("cd_misc42","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc42")
                                                       DestroyItem("%tutu_var%misc42")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",3)~ GOTO GemQ3 // diamond
-    IF ~Global("misc43","LOCALS",0)
-        PartyHasItem("%tutu_var%misc43")~ THEN REPLY #7140 DO ~SetGlobal("misc43","LOCALS",1)
+    IF ~Global("cd_misc43","LOCALS",0)
+        PartyHasItem("%tutu_var%misc43")~ THEN REPLY #7140 DO ~SetGlobal("cd_misc43","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc43")
                                                       DestroyItem("%tutu_var%misc43")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",3)~ GOTO GemQ3 // emerald
-    IF ~Global("misc16","LOCALS",0)
-        PartyHasItem("%tutu_var%misc16")~ THEN REPLY #7107 DO ~SetGlobal("misc16","LOCALS",1)
+    IF ~Global("cd_misc16","LOCALS",0)
+        PartyHasItem("%tutu_var%misc16")~ THEN REPLY #7107 DO ~SetGlobal("cd_misc16","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc16")
                                                       DestroyItem("%tutu_var%misc16")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // fire agate
-    IF ~Global("misc34","LOCALS",0)
-        PartyHasItem("%tutu_var%misc34")~ THEN REPLY #7131 DO ~SetGlobal("misc34","LOCALS",1)
+    IF ~Global("cd_misc34","LOCALS",0)
+        PartyHasItem("%tutu_var%misc34")~ THEN REPLY #7131 DO ~SetGlobal("cd_misc34","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc34")
                                                       DestroyItem("%tutu_var%misc34")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // garnet
-    IF ~Global("misc35","LOCALS",0)
-        PartyHasItem("%tutu_var%misc35")~ THEN REPLY #7132 DO ~SetGlobal("misc35","LOCALS",1)
+    IF ~Global("cd_misc35","LOCALS",0)
+        PartyHasItem("%tutu_var%misc35")~ THEN REPLY #7132 DO ~SetGlobal("cd_misc35","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc35")
                                                       DestroyItem("%tutu_var%misc35")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // horn coral
-    IF ~Global("misc26","LOCALS",0)
-        PartyHasItem("%tutu_var%misc26")~ THEN REPLY #7118 DO ~SetGlobal("misc26","LOCALS",1)
+    IF ~Global("cd_misc26","LOCALS",0)
+        PartyHasItem("%tutu_var%misc26")~ THEN REPLY #7118 DO ~SetGlobal("cd_misc26","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc26")
                                                       DestroyItem("%tutu_var%misc26")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // iol
-    IF ~Global("misc23","LOCALS",0)
-        PartyHasItem("%tutu_var%misc23")~ THEN REPLY #7115 DO ~SetGlobal("misc23","LOCALS",1)
+    IF ~Global("cd_misc23","LOCALS",0)
+        PartyHasItem("%tutu_var%misc23")~ THEN REPLY #7115 DO ~SetGlobal("cd_misc23","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc23")
                                                       DestroyItem("%tutu_var%misc23")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // jasper
-    IF ~Global("misc44","LOCALS",0)
-        PartyHasItem("%tutu_var%misc44")~ THEN REPLY #7141 DO ~SetGlobal("misc44","LOCALS",1)
+    IF ~Global("cd_misc44","LOCALS",0)
+        PartyHasItem("%tutu_var%misc44")~ THEN REPLY #7141 DO ~SetGlobal("cd_misc44","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc44")
                                                       DestroyItem("%tutu_var%misc44")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",3)~ GOTO GemQ3 // king's tear
-    IF ~Global("misc17","LOCALS",0)
-        PartyHasItem("%tutu_var%misc17")~ THEN REPLY #16521 DO ~SetGlobal("misc17","LOCALS",1)
+    IF ~Global("cd_misc17","LOCALS",0)
+        PartyHasItem("%tutu_var%misc17")~ THEN REPLY #16521 DO ~SetGlobal("cd_misc17","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc17")
                                                       DestroyItem("%tutu_var%misc17")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // lynx eye
-    IF ~Global("misc40","LOCALS",0)
-        PartyHasItem("%tutu_var%misc40")~ THEN REPLY #7137 DO ~SetGlobal("misc40","LOCALS",1)
+    IF ~Global("cd_misc40","LOCALS",0)
+        PartyHasItem("%tutu_var%misc40")~ THEN REPLY #7137 DO ~SetGlobal("cd_misc40","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc40")
                                                       DestroyItem("%tutu_var%misc40")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // moonbar
-    IF ~Global("misc27","LOCALS",0)
-        PartyHasItem("%tutu_var%misc27")~ THEN REPLY #7119 DO ~SetGlobal("misc27","LOCALS",1)
+    IF ~Global("cd_misc27","LOCALS",0)
+        PartyHasItem("%tutu_var%misc27")~ THEN REPLY #7119 DO ~SetGlobal("cd_misc27","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc27")
                                                       DestroyItem("%tutu_var%misc27")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // moonstone
-    IF ~Global("misc45","LOCALS",0)
-        PartyHasItem("%tutu_var%misc45")~ THEN REPLY #7142 DO ~SetGlobal("misc45","LOCALS",1)
+    IF ~Global("cd_misc45","LOCALS",0)
+        PartyHasItem("%tutu_var%misc45")~ THEN REPLY #7142 DO ~SetGlobal("cd_misc45","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc45")
                                                       DestroyItem("%tutu_var%misc45")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",5)~ GOTO GemQ5 // rogue stone
-    IF ~Global("misc32","LOCALS",0)
-        PartyHasItem("%tutu_var%misc32")~ THEN REPLY #7129 DO ~SetGlobal("misc32","LOCALS",1)
+%mih_ruby%
+%mih_sapphire%
+    IF ~Global("cd_misc32","LOCALS",0)
+        PartyHasItem("%tutu_var%misc32")~ THEN REPLY #7129 DO ~SetGlobal("cd_misc32","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc32")
                                                       DestroyItem("%tutu_var%misc32")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // shandon
-    IF ~Global("misc21","LOCALS",0)
-        PartyHasItem("%tutu_var%misc21")~ THEN REPLY #7113 DO ~SetGlobal("misc21","LOCALS",1)
+    IF ~Global("cd_misc21","LOCALS",0)
+        PartyHasItem("%tutu_var%misc21")~ THEN REPLY #7113 DO ~SetGlobal("cd_misc21","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc21")
                                                       DestroyItem("%tutu_var%misc21")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // skydrop
-    IF ~Global("misc37","LOCALS",0)
-        PartyHasItem("%tutu_var%misc37")~ THEN REPLY #7134 DO ~SetGlobal("misc37","LOCALS",1)
+    IF ~Global("cd_misc37","LOCALS",0)
+        PartyHasItem("%tutu_var%misc37")~ THEN REPLY #7134 DO ~SetGlobal("cd_misc37","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc37")
                                                       DestroyItem("%tutu_var%misc37")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // sphene
-    IF ~Global("misc31","LOCALS",0)
-        PartyHasItem("%tutu_var%misc31")~ THEN REPLY #7128 DO ~SetGlobal("misc31","LOCALS",1)
+    IF ~Global("cd_misc31","LOCALS",0)
+        PartyHasItem("%tutu_var%misc31")~ THEN REPLY #7128 DO ~SetGlobal("cd_misc31","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc31")
                                                       DestroyItem("%tutu_var%misc31")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // star diopside
-    IF ~Global("misc41","LOCALS",0)
-        PartyHasItem("%tutu_var%misc41")~ THEN REPLY #7138 DO ~SetGlobal("misc41","LOCALS",1)
+    IF ~Global("cd_misc41","LOCALS",0)
+        PartyHasItem("%tutu_var%misc41")~ THEN REPLY #7138 DO ~SetGlobal("cd_misc41","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc41")
                                                       DestroyItem("%tutu_var%misc41")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",3)~ GOTO GemQ3 // star sapphire
-    IF ~Global("misc18","LOCALS",0)
-        PartyHasItem("%tutu_var%misc18")~ THEN REPLY #7109 DO ~SetGlobal("misc18","LOCALS",1)
+    IF ~Global("cd_misc18","LOCALS",0)
+        PartyHasItem("%tutu_var%misc18")~ THEN REPLY #7109 DO ~SetGlobal("cd_misc18","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc18")
                                                       DestroyItem("%tutu_var%misc18")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // sunstone
-    IF ~Global("misc24","LOCALS",0)
-        PartyHasItem("%tutu_var%misc24")~ THEN REPLY #7116 DO ~SetGlobal("misc24","LOCALS",1)
+    IF ~Global("cd_misc24","LOCALS",0)
+        PartyHasItem("%tutu_var%misc24")~ THEN REPLY #7116 DO ~SetGlobal("cd_misc24","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc24")
                                                       DestroyItem("%tutu_var%misc24")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // tchazar
-    IF ~Global("misc19","LOCALS",0)
-        PartyHasItem("%tutu_var%misc19")~ THEN REPLY #7110 DO ~SetGlobal("misc19","LOCALS",1)
+    IF ~Global("cd_misc19","LOCALS",0)
+        PartyHasItem("%tutu_var%misc19")~ THEN REPLY #7110 DO ~SetGlobal("cd_misc19","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc19")
                                                       DestroyItem("%tutu_var%misc19")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // turquoise
-    IF ~Global("misc39","LOCALS",0)
-        PartyHasItem("%tutu_var%misc39")~ THEN REPLY #7136 DO ~SetGlobal("misc39","LOCALS",1)
+    IF ~Global("cd_misc39","LOCALS",0)
+        PartyHasItem("%tutu_var%misc39")~ THEN REPLY #7136 DO ~SetGlobal("cd_misc39","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc39")
                                                       DestroyItem("%tutu_var%misc39")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",5)~ GOTO GemQ5 // water opal
-    IF ~Global("misc28","LOCALS",0)
-        PartyHasItem("%tutu_var%misc28")~ THEN REPLY #7124 DO ~SetGlobal("misc28","LOCALS",1)
+    IF ~Global("cd_misc28","LOCALS",0)
+        PartyHasItem("%tutu_var%misc28")~ THEN REPLY #7124 DO ~SetGlobal("cd_misc28","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc28")
                                                       DestroyItem("%tutu_var%misc28")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // waterstar
-    IF ~Global("misc36","LOCALS",0)
-        PartyHasItem("%tutu_var%misc36")~ THEN REPLY #7133 DO ~SetGlobal("misc36","LOCALS",1)
+    IF ~Global("cd_misc36","LOCALS",0)
+        PartyHasItem("%tutu_var%misc36")~ THEN REPLY #7133 DO ~SetGlobal("cd_misc36","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc36")
                                                       DestroyItem("%tutu_var%misc36")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",2)~ GOTO GemQ2 // white pearl
-    IF ~Global("misc29","LOCALS",0)
-        PartyHasItem("%tutu_var%misc29")~ THEN REPLY #7125 DO ~SetGlobal("misc29","LOCALS",1)
+    IF ~Global("cd_misc29","LOCALS",0)
+        PartyHasItem("%tutu_var%misc29")~ THEN REPLY #7125 DO ~SetGlobal("cd_misc29","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc29")
                                                       DestroyItem("%tutu_var%misc29")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",1)~ GOTO GemQ1 // ziose
-    IF ~Global("misc25","LOCALS",0)
-        PartyHasItem("%tutu_var%misc25")~ THEN REPLY #7117 DO ~SetGlobal("misc25","LOCALS",1)
+    IF ~Global("cd_misc25","LOCALS",0)
+        PartyHasItem("%tutu_var%misc25")~ THEN REPLY #7117 DO ~SetGlobal("cd_misc25","LOCALS",1)
                                                       TakePartyItem("%tutu_var%misc25")
                                                       DestroyItem("%tutu_var%misc25")
                                                       IncrementGlobal("CDGemQuality","GLOBAL",5)~ GOTO GemQ5 // zircon
@@ -1061,12 +1183,17 @@ APPEND ~%tutu_var%THALAN~
   END
   
   IF ~~ THEN BEGIN WheresMeli SAY @1054 = @1055
-    IF ~~ THEN REPLY @1056 GOTO OffIGoToSeeTaerom
+    IF ~~ THEN REPLY @1056 DO ~EraseJournalEntry(@1337) 
+                               EraseJournalEntry(@1338) 
+                               AddJournalEntry(@1339,QUEST)~ GOTO OffIGoToSeeTaerom
     IF ~Gender(LastTalkedToBy(),FEMALE)~ THEN REPLY @1057 DO ~SetGlobalTimer("CDMelicampReturns","GLOBAL",FOUR_DAYS)
-                                                    SetGlobal("CDBracerQuest","GLOBAL",13)~ GOTO SkipMelicamp
+                                                              SetGlobal("CDBracerQuest","GLOBAL",13)~ GOTO SkipMelicamp
     IF ~Gender(LastTalkedToBy(),MALE)~ THEN REPLY @1058 DO ~SetGlobalTimer("CDMelicampReturns","GLOBAL",FOUR_DAYS)
-                                                  SetGlobal("CDBracerQuest","GLOBAL",13)~ GOTO SkipMelicamp
-    IF ~~ THEN REPLY @1059 DO ~StartStore("%tutu_scripth%IGHHEDG",LastTalkedToBy(Myself))~ EXIT
+                                                            SetGlobal("CDBracerQuest","GLOBAL",13)~ GOTO SkipMelicamp
+    IF ~~ THEN REPLY @1059 DO ~EraseJournalEntry(@1337) 
+                               EraseJournalEntry(@1338) 
+                               AddJournalEntry(@1339,QUEST) 
+                               StartStore("%tutu_scripth%IGHHEDG",LastTalkedToBy(Myself))~ EXIT
   END
   
   IF ~~ THEN BEGIN OffIGoToSeeTaerom SAY @1060
@@ -1074,7 +1201,7 @@ APPEND ~%tutu_var%THALAN~
   END
 
   IF ~~ THEN BEGIN SkipMelicamp SAY @1099
-    IF ~~ THEN EXIT
+    IF ~~ THEN DO ~AddJournalEntry(@1340,QUEST)~ EXIT
   END
   
   IF ~~ THEN BEGIN IncantationQuestion SAY @1255 = @1256 = @1257
@@ -1151,13 +1278,13 @@ END
 BEGIN CDGRACE
 
 IF ~!GlobalGT("Chapter","GLOBAL",%tutu_chapter_2%)~ THEN BEGIN MinesNotDone SAY @1105
-  IF ~Global("CDBracerQuest","GLOBAL",7)~ THEN DO ~SetGlobal("CDBracerQuest","GLOBAL",8)~ REPLY @1106 GOTO WheresMeli
+  IF ~Global("CDBracerQuest","GLOBAL",7)~ THEN REPLY @1106 GOTO WheresMeli
   IF ~Global("CDBracerQuest","GLOBAL",8)~ THEN REPLY @1109 GOTO WheresMeli
   IF ~~ THEN REPLY @1107 GOTO Goodbye
 END
 
 IF ~GlobalGT("Chapter","GLOBAL",%tutu_chapter_2%)~ THEN BEGIN MinesDone SAY @1111
-  IF ~Global("CDBracerQuest","GLOBAL",7)~ THEN DO ~SetGlobal("CDBracerQuest","GLOBAL",8)~ REPLY @1106 GOTO WheresMeli
+  IF ~Global("CDBracerQuest","GLOBAL",7)~ THEN REPLY @1106 GOTO WheresMeli
   IF ~Global("CDBracerQuest","GLOBAL",8)~ THEN REPLY @1109 GOTO WheresMeli
   IF ~~ THEN REPLY @1107 GOTO Goodbye
 END
@@ -1167,14 +1294,22 @@ IF ~~ THEN BEGIN Goodbye SAY @1108
 END
 
 IF ~~ THEN BEGIN WheresMeli SAY @1110
-  IF ~~ THEN EXIT
+  IF ~~ THEN DO ~AddJournalEntry(@1342,QUEST) SetGlobal("CDBracerQuest","GLOBAL",8)~ EXIT
+  IF ~!Global("CDBracerQuest","GLOBAL",7)~ THEN EXIT
 END
 
 BEGIN CDMELI
 
 IF ~Global("CDSal","MYAREA",2)
     Global("CDJames","MYAREA",2)~ THEN BEGIN QuestFinished SAY @1178 = @1179
-  IF ~~ THEN DO ~GiveItemCreate("cdore",LastTalkedToBy(Myself),1,0,0)
+  IF ~~ THEN DO ~EraseJournalEntry(@1341)
+                 EraseJournalEntry(@1342)
+                 EraseJournalEntry(@1343)
+                 EraseJournalEntry(@1344)
+                 EraseJournalEntry(@1345)
+                 EraseJournalEntry(@1346)
+                 AddJournalEntry(@1347,QUEST)
+                 GiveItemCreate("cdore",LastTalkedToBy(Myself),1,0,0)
                  SetGlobal("CDBracerQuest","GLOBAL",10)
                  SetGlobal("CDMinerQuest","MYAREA",2)
                  EscapeArea()~ EXIT
@@ -1205,8 +1340,8 @@ IF ~~ THEN BEGIN MeliControl SAY @1129
 END
 
 IF ~~ THEN BEGIN QuestAccepted SAY @1130 = @1131 = @1132
-  IF ~~ THEN REPLY @1133 GOTO OffYouGo
-  IF ~~ THEN REPLY @1134 GOTO OffYouGo
+  IF ~~ THEN DO ~AddJournalEntry(@1344,QUEST)~ REPLY @1133 GOTO OffYouGo
+  IF ~~ THEN DO ~AddJournalEntry(@1344,QUEST)~ REPLY @1134 GOTO OffYouGo
 END
 
 IF ~~ THEN BEGIN OffYouGo SAY @1135
@@ -1280,13 +1415,15 @@ IF ~True()~ THEN BEGIN TalkingHeads6 SAY @1141
 END
 
 IF ~~ THEN BEGIN WrongAnswer SAY @1157 = @1158
-  IF ~~ THEN DO ~AddexperienceParty(50)
+  IF ~~ THEN DO ~AddJournalEntry(@1345,QUEST)
+                 AddexperienceParty(50)
                  SetGlobal("CDSal","MYAREA",2)
                  EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN RightAnswer SAY @1159 = @1160
-  IF ~~ THEN DO ~AddexperienceParty(100)
+  IF ~~ THEN DO ~AddJournalEntry(@1345,QUEST)
+                 AddexperienceParty(100)
                  SetGlobal("CDSal","MYAREA",2)
                  EscapeArea()~ EXIT
 END
@@ -1342,13 +1479,15 @@ IF ~True()~ THEN BEGIN TalkingHeads6 SAY @1141
 END
 
 IF ~~ THEN BEGIN WrongAnswer SAY @1165 = @1166
-  IF ~~ THEN DO ~AddexperienceParty(50)
+  IF ~~ THEN DO ~AddJournalEntry(@1346,QUEST)
+                 AddexperienceParty(50)
                  SetGlobal("CDJames","MYAREA",2)
                  EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN RightAnswer SAY @1165 = @1167
-  IF ~~ THEN DO ~AddexperienceParty(100)
+  IF ~~ THEN DO ~AddJournalEntry(@1346,QUEST)
+                 AddexperienceParty(100)
                  SetGlobal("CDJames","MYAREA",2)
                  EscapeArea()~ EXIT
 END

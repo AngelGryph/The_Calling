@@ -1,0 +1,95 @@
+IF
+  Global("CDSpawnFighterQuest","%GnollStronghold%",0)
+  %blackguard_check%
+    Class(Player1,FIGHTER)
+    Class(Player1,FIGHTER_MAGE)
+    Class(Player1,FIGHTER_CLERIC)
+    Class(Player1,FIGHTER_THIEF)
+    Class(Player1,FIGHTER_MAGE_THIEF)
+    Class(Player1,FIGHTER_DRUID)
+    Class(Player1,FIGHTER_MAGE_CLERIC)
+    Global("CDMultistronghold","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDSpawnFighterQuest","%GnollStronghold%",1)
+    CreateCreature("cd51qm",[4950.2700],9)
+    CreateCreature("cd51ded1",[2175.1788],9)
+    CreateCreature("cd51ded2",[2209.1867],7)
+    CreateCreature("cd51ded3",[2257.1843],6)
+    CreateCreature("cd51ded4",[2302.2181],12)
+    CreateCreature("cd51ded5",[1868.1602],5)
+    CreateCreature("cd51ded6",[1992.1634],9)
+END
+
+IF
+  Global("CDSpawnFighterWatchdog","%GnollStronghold%",0)
+THEN
+  RESPONSE #100
+    SetGlobal("CDSpawnFighterWatchdog","%GnollStronghold%",1)
+    CreateCreature("CD51GO",[2600.600],0)
+END
+
+IF
+  Dead("CD51GS") // shaman
+  Dead("CD51CH") // chieftain
+  Dead("CD51GO") // watcher
+  Global("cdjournal3dead","%GnollStronghold%",0)
+  !Global("CDGnollQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("cdjournal3dead","%GnollStronghold%",1)
+    EraseJournalEntry(@10176)
+    EraseJournalEntry(@10177)
+    EraseJournalEntry(@10178)
+    AddJournalEntry(@10179,QUEST)
+END
+
+IF
+  Dead("CD51GS") // shaman
+  OR(2)
+    !Dead("CD51CH") // chieftain
+    !Dead("CD51GO") // watcher
+  Global("cdjournal_cd51gs","%GnollStronghold%",0)
+  !Global("CDGnollQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("cdjournal_cd51gs","%GnollStronghold%",1)
+    AddJournalEntry(@10177,QUEST)
+END
+
+IF
+  Dead("CD51CH") // chieftain
+  OR(2)
+    !Dead("CD51GS") // shaman
+    !Dead("CD51GO") // watcher
+  Global("cdjournal_cd51ch","%GnollStronghold%",0)
+  !Global("CDGnollQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("cdjournal_cd51ch","%GnollStronghold%",1)
+    AddJournalEntry(@10176,QUEST)
+END
+
+IF
+  Dead("CD51GO") // watcher
+  OR(2)
+    !Dead("CD51GS") // shaman
+    !Dead("CD51CH") // chieftain
+  Global("cdjournal_cd51go","%GnollStronghold%",0)
+  !Global("CDGnollQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("cdjournal_cd51go","%GnollStronghold%",1)
+    AddJournalEntry(@10178,QUEST)
+END
+
+IF
+  Dead("CD51gho") // ghost
+  Global("cdjournal_cd51gho","%GnollStronghold%",0)
+  !Global("CDGnollQuest","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("cdjournal_cd51gho","%GnollStronghold%",1)
+    EraseJournalEntry(@10184)
+    AddJournalEntry(@10185,QUEST)
+END

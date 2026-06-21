@@ -1,0 +1,27 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ClearAllActions()
+    StartCutSceneMode() 
+    FadeToColor([20.0],0)
+    Wait(1)
+    MoveViewPoint([300.300],INSTANT)
+    ActionOverride("%tutu_var%GELLAN",JumpToPoint([400.300]))
+    FadeFromColor([20.0],0)
+    ActionOverride("%tutu_var%GELLAN",TakePartyItem("CD23AMU")) 
+    ActionOverride("%tutu_var%GELLAN",DestroyItem("CD23AMU")) 
+    Wait(1) 
+    CreateVisualEffectObject("SPCLOUD1","%tutu_var%GELLAN") 
+    Wait(1) 
+    CreateVisualEffectObject("SPFLESHS","%tutu_var%GELLAN") 
+    Wait(1) 
+    CreateVisualEffectObject("SPFLESHS","%tutu_var%GELLAN") 
+    Wait(1) 
+    CreateVisualEffectObject("SPFLESHS","%tutu_var%GELLAN") 
+    Wait(4) 
+    SetGlobal("CDMonkCalling","GLOBAL",5) 
+    EndCutSceneMode() 
+    ActionOverride("CD23MON",StartDialogueNoSet(Player1))
+END
