@@ -1,7 +1,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
-///// the calling                                      \\\\\
+///// Mage - The Cursed Bracers                        \\\\\
 /////                                                  \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -39,16 +39,887 @@ STATISTICS:
 
 STATISTICS:
 
-Disables spellcasting~
+Disables spellcasting
+Special:  can only be removed by a 'remove curse' spell~
   @123 = ~The Imbecile's Amulet~
   @124 = ~Amulets such as these are very popular amongst unscrupulous merchants. These items appear to be ornate, expensive amulets and are often given as gifts to potential clients, rivals, or other potential business contacts. They're designed merely to dull the wit, without being unduly noticeable, enabling the merchant to press their advantage during complex negotiations.
 
 STATISTICS:
 
-Reduces intelligence, wisdom, and charisma by two while worn~
+Reduces intelligence, wisdom, and charisma by two while worn
+Special:  can only be removed by a 'remove curse' spell~
   @125 = ~Black Pearl~
   @126 = ~White Pearl~
   @127 = ~Enshelled Black Pearl~ // Black pearl from Balduran's Seatower, @546 in that mod
+  
+  
+
+@1000 = ~Good, though it was the greatest of luck you did not retain a wing for a limb.  You always were a bit cockeyed, but I suppose that doesn't count.~
+@1001 = ~We must endeavor to find those bracers, lest they curse some other unfortunate soul. <CHARNAME>, I will need all the help I can get, and you are a <PRO_MANWOMAN> of magic. Can you assist me?~
+@1002 = ~Of course we'll help.~
+@1003 = ~What do you need from me?~
+@1004 = ~I have better ways to spend my time.~
+@1005 = ~And end up feathered and passing eggs? I think not!~
+@1006 = ~That may be, but I have little experience with breaking curses.~
+@1007 = ~There's really no call *cluck* for that. As you can see *cluck*, I've made a full *cluck* recovery.~
+@1008 = ~Excellent. Our first order of business is to locate the bracers. If they are not in the area, then I fear we can do nothing further. Melicamp!~
+@1009 = ~Yes master Thalantyr?~
+@1010 = ~Take this note to Taerom Fuiruim in Beregost. We shall need a scrying device to assist us in divining the location of the bracers.~
+@1011 = ~Taerom has helped with such baubles in the past, and he can build the mechanical half of this item. Assist him with whatever he needs.~
+@1012 = ~I am off *cluck* to Beregost.~
+@1013 = ~And Melicamp? Be careful, for Mystra's sake. Should you experience anything odd return here immediately.~
+@1014 = ~*cluck*~
+@1015 = ~Yes, well... more odd than clucking.~
+@1016 = ~Now, <CHARNAME>, I will need your assistance with powering the device. I will need three different gems.~
+@1017 = ~I shall leave it to your discretion as to which gems would be best served for divination.~
+@1018 = ~How will I know if a gem will work?~
+@1019 = ~Where should I start looking?~
+@1020 = ~Do you have any preferences for the gems?~
+@1021 = ~Very well, I shall return with the gems.~
+@1022 = ~You must choose your own path, of course. Now, if you'll excuse us, Melicamp and I will have to take on this task ourselves.~
+@1023 = ~The curse on the bracers is rather unconventional. I had kept the bracers, rather than destroying them, as I felt they would be worthwhile to study.~
+@1024 = ~The destruction should be straightforward, but the immediate problem is their location. If they've gone too far, there's nothing we can do.~
+@1025 = ~If someone has found them then that, too, will cause complications.~
+@1026 = ~I will not promise you any monetary rewards, though due to the unconventional nature of the bracers you will probably learn much of magic that was never covered in your training.~
+@1027 = ~I will help, if only to further my own abilities.~
+@1028 = ~No money, no help. We're gone.~
+@1029 = ~Any gem will work, but some will work better for divination than others, and will make the remainder of the task easier. Figuring out which ones is your task, <CHARNAME>.~
+@1030 = ~Don't be silly, gems are everywhere. Simply pay attention in your travels.~
+@1031 = ~Black pearls are good for scrying devices, and are prized by sirines. Other than that you will have to do your own research.~
+@1032 = ~Then I wish you well in your task. Good day.~
+//@1033 = ~Welcome back, <CHARNAME>. Any progress?~
+//@1034 = ~Not yet. In the meantime, can I see your wares?~
+@1035 = ~I have some gems for the scrying device.~
+//@1036 = ~Nothing to report yet.~
+@1037 = ~Which gem do you wish to use?~
+@1038 = ~Actually, I think I'll look some more and then come back.~
+@1039 = ~I've changed my mind. Can I see your wares instead?~
+@1040 = ~Hmm.~
+@1041 = ~An interesting choice.~
+@1042 = ~A very valuable stone. You may discover, however, that value does not necessarily mean that it's the best choice of components.~
+@1043 = ~An excellent choice.~
+@1044 = ~Do you have any more?~
+@1045 = ~Yes we do.~
+@1046 = ~That's all for now.~
+@1047 = ~We do not. But while we're here can we see your wares?~
+@1048 = ~Well you've made your selections; that's all three.~
+@1049 = ~I do not think you've put any thought into your picks, but what's done is done.~
+@1050 = ~You could have done better--much better--but we shall muddle through regardless.~
+@1051 = ~You made solid choices overall.~
+@1052 = ~Some excellent choices, <CHARNAME>. I don't think we'll have any problems with the divination.~
+@1053 = ~I don't think I could ask for three better gems to work with. You've done your homework.~
+@1054 = ~We now have the gems, but I still need a device to mount them. Could you nip over to the Thunder Hammer Smithy and check on Melicamp?~
+@1055 = ~It would be just like him to screw up such a simple assignment.~
+@1056 = ~We'll go help Melicamp then.~
+@1057 = ~I'm not your errand girl! He'll be back when he's back.~
+@1058 = ~I'm not your errand boy! He'll be back when he's back.~
+@1059 = ~Sure, but can we do some shopping first?~
+@1060 = ~Fare thee well.~
+@1061 = ~Do you know anything of black pearls?~
+@1062 = ~They are highly prized by sirines, and the contingent here at the temple have given them occasionally as offerings to the Morninglord for special occasions.~
+@1063 = ~May we have one?~
+@1064 = ~Give us one!~
+@1065 = ~What would it take to get one from you?~
+@1066 = ~Interesting. Thanks.~
+@1067 = ~These are gifts consecrated to Lathander! I cannot.~
+@1068 = ~Please, we are trying to track down cursed bracers for Thalantyr. We need them to help build a scrying device.~
+@1069 = ~You can either give us the pearls, or we can take everything here... including your life.~
+@1070 = ~Perhaps a donation would compensate for their loss. Gold, too, can be consecrated to Lathander, yes?~
+@1071 = ~I will not be intimidated by some petty thief! To me, my brethren!~
+@1072 = ~Can I assist you with anything else?~
+@1073 = ~Yes, but...~
+@1074 = ~The pearls are pretty, but you can not help the poor and needy much with them, can you?~
+@1075 = ~You've seen the good we've done here. Can you not help us in return?~
+@1076 = ~I'm sure we can find a mutually beneficial arrangement.~
+@1077 = ~The pearl was a prize of the Temple, and it is very thoughtful of you to give us a new one.~
+@1078 = ~We found another black pearl in our journeys. We'd like to donate it to the Temple as a replacement for the one you gave to us.~
+@1079 = ~I think not! I will not hand over a pearl for gold, as if this is a common store.~
+@1080 = ~I suppose a donation of... 500 gold would offset its loss.~
+@1081 = ~I don't have that kind of money right now.~
+@1082 = ~No, your price is too steep.~
+@1083 = ~Sounds good.~
+@1084 = ~Then you'll have to find another pearl. Good day.~
+@1085 = ~I'd like to discuss black pearls again.~
+@1086 = ~Very well.~
+@1087 = ~We discussed donating gold to the temple in exchange for a black pearl.~
+@1088 = ~True, you have helped the temple in the past~
+@1089 = ~I hear nothing but good things about your exploits from the townspeople.~
+@1090 = ~You can have the pearl then, with the Morninglord's blessing. It will be a loss to the temple, but it's better served being put to use for good than in a display case.~
+@1091 = ~Thalantyr, the denizen of the High Hedge? What are you doing with him?~
+@1092 = ~His apprentice was cursed, and we are seeking to destroy the item that cursed him.~
+@1093 = ~My business is with Thalantyr.~
+@1094 = ~Thalantyr wishes to build a scrying device.~
+@1095 = ~Thalantyr is known to me, as is your party.~
+@1096 = ~I cannot hand over a gift to Lathander unless you are willing to discuss how it will be used.~
+@1097 = ~Thalantyr is known to me, but I do not know you well enough. Perhaps in time when I know you better.~
+@1098 = ~Until then, I must decline. Good day to you.~
+@1099 = ~So be it.~
+@1100 = ~And I'm sure I can trust your discretion in this.~
+@1101 = ~Have you seen Melicamp? Mage apprentice, clucks a lot?~
+@1102 = ~Oh sure. He was looking for some ore that we don't have on hand at the moment, so I sent him down to the Nashkel mines.~
+@1103 = ~A friend of mine, Grace, was going to get the special ores he needed.~
+@1104 = ~Where was Melicamp again?~
+@1105 = ~Sorry, I'm too busy dealing with the problems at the mine.~
+@1106 = ~You are Grace? Have you seen Melicamp?~
+@1107 = ~Good day to you.~
+@1108 = ~And to you as well.~
+@1109 = ~Where was Melicamp again?~
+@1110 = ~I gave Melicamp some of the ore he needed, and he went down into the mines to get the rest.~
+@1111 = ~We're all grateful for your assistance with the mines.~
+@1112 = ~*Bwaak* Oh, <GABBER>, thank goodness you're here!~
+@1113 = ~It's the miners, something's gone *cluck* wrong, they're not making much sense... I need *cluck* your help.~
+@1114 = ~Slow down, Melicamp, and tell me what's wrong.~
+@1115 = ~Quit yer babbling!~
+@1116 = ~*cluck*~
+@1117 = ~After talking with Grace, I came *cluck* down here to gather the last of the ore for Taerom.~
+@1118 = ~I was *cluck* cornered by some kobolds. I fought them off, but, well... *cluck*~
+@1119 = ~Some of my magic, uh, kinda... *cluck*... backfired.~
+@1120 = ~These two miners were caught *cluck* in the backlash, and I think there's *cluck* something wrong with their memory.~
+@1121 = ~Please, you've got to *cluck* help me.~
+@1122 = ~I don't have time to clean up your mess! You fix it, we're gone.~
+@1123 = ~Honestly Melicamp, you must learn to control yourself.~
+@1124 = ~What do you suggest?~
+@1125 = ~Fine, *cluck* thanks for nothing. C'mon you two we're outta here.~
+@1126 = ~Who are you?~
+@1127 = ~Huh?~
+@1128 = ~I'll meet *cluck* you back at the High Hedge after I sort this out.~
+@1129 = ~Yeah, easy for *cluck* you to say. I don't hear you clucking.~
+@1130 = ~The memory loss doesn't seem too bad, and may even wear off on its own.~
+@1131 = ~But I feel terrible, and I can't leave them like this. Perhaps if we could jog their memory a bit...~
+@1132 = ~The other miners in the area may be able to help. Ask around and see if you can learn something about them.~
+@1133 = ~It's not much of a plan, but we'll try.~
+@1134 = ~We'll go interview the other miners and return.~
+@1135 = ~I'll stay here and make sure they don't wander off.~
+@1136 = ~How did I get here?~
+@1137 = ~How do I work this?~
+@1138 = ~Where is that large oxcart?~
+@1139 = ~What is that beautiful house?~
+@1140 = ~Where does that highway go?~
+@1141 = ~Am I right? ...am I wrong?~
+@1142 = ~Do you know anything about Sal or James? Their memories have been damaged.~
+@1143 = ~Can't say that I do.~
+@1144 = ~Sorry pal, I don't know nothin' about nothin'.~
+@1145 = ~Nah, they kept to themselves mostly.~
+@1146 = ~It's hard to talk much in these conditions.~
+@1147 = ~But I remember James goin' on and on about his gal back in Beregost. Name of Winnie, if memory serves.~
+@1148 = ~Those two? No, sorry.~
+@1149 = ~Who are Sal and James?~
+@1150 = ~Until recently, I've been working deeper in the mine. I don't know the miners on this level so well.~
+@1151 = ~Yeah, Sal's got two kids back home.~
+@1152 = ~Twins, actually. Robby and Ned.~
+@1153 = ~Sal, don't you remember your twin boys? Bobby and Ned?~
+@1154 = ~Sal, don't you remember your twin boys? Bobby and Ted?~
+@1155 = ~Sal, don't you remember your twin boys? Robby and Ned?~
+@1156 = ~Sal, don't you remember your twin boys? Robby and Ted?~
+@1157 = ~I feel like a fog is lifting... yeah, my boys... wait, what?~
+@1158 = ~It's Robby and Ned! I've got to go see them right away.~
+@1159 = ~I feel like a fog is lifting... yeah, my boys...~
+@1160 = ~Robby and Ned! Poppa's coming home!~
+@1161 = ~James, try to remember your sweetie in Beregost, Minnie.~
+@1162 = ~James, try to remember your sweetie in Beregost, Winnie.~
+@1163 = ~James, try to remember your sweetie in Nashkel, Minnie.~
+@1164 = ~James, try to remember your sweetie in Nashkel, Winnie.~
+@1165 = ~Yeah, I can just make out her face. Ah, my cutie pie!~
+@1166 = ~But it's Winnie of Beregost. Thanks for your help anyway, I'm off to see her.~
+@1167 = ~Winnie! I'm off to Beregost to see you again!~
+@1168 = ~Any luck yet?~
+@1169 = ~No, not yet.~
+@1170 = ~We've learned the name of Sal's twin boys.~
+@1171 = ~We know that James has a sweetheart back home.~
+@1172 = ~Sal is good, but we're still working on James.~
+@1173 = ~James is good, but we're still working on Sal.~
+@1174 = ~Good work. Try *cluck* jogging Sal's memory with it.~
+@1175 = ~Nicely done. See if you *cluck* can restore James's memory.~
+@1176 = ~Hey, it *cluck* worked! Now if we can only find something *cluck* else for the other...~
+@1177 = ~I'm sure someone *cluck* around here must know something. Keep asking around.~
+@1178 = ~Phew, you really saved my *cluck* giblets.~
+@1179 = ~I'm going to head back to *cluck* Thalantyr before anything else happens. Take this ore *cluck* to Taerom for me.~
+@1180 = ~Thalantyr wants to commission you for a scrying device. We've brought some ore for the task.~
+@1181 = ~Yes, Thalantyr sent over some directions and mentioned young Melicamp would be by with the ore.~
+@1182 = ~I'm guessing since you're here that Melicamp managed to run *ahem* afowl of his task again?~
+@1183 = ~Give me, say, two days and I'll have that ready for Thalantyr.~
+@1184 = ~No, not yet. Give me a bit more time.~
+@1185 = ~Hey there <GABBER>. I've got that astrolabe ready for Thalantyr. He had already paid in advance, so take it back to him with my compliments.~
+@1186 = ~Thanks Taerom, I'll do that.~
+@1187 = ~Thanks. While we're here, can we see your wares?~
+@1188 = ~Just wanted to check and see if you have Thalantyr's project ready yet.~
+@1189 = ~Welcome back, <GABBER>. I see you come bearing Taerom's work for me as well.~
+@1190 = ~I've already prepared the gems, so it's just a matter of slotting them into the settings...~
+@1191 = ~And there we go! Shall we begin?~
+@1192 = ~Master Thalantyr, I have *cluck* returned.~
+@1193 = ~Melicamp, what took you so long?~
+@1194 = ~A few *cluck* complications, but no matter. Here's your new *cluck* scryer from Taerom.~
+@1195 = ~Yes, please go ahead.~
+@1196 = ~How exactly is this going to work?~
+@1197 = ~Divination is, even under ideal conditions, an imprecise art. Being a specialist in divination, you already know that, don't you <CHARNAME>?~
+@1198 = ~Divination is, even under ideal conditions, an imprecise art.~
+@1199 = ~A lot will depend on the spell components we've selected to power the scrying device. Your selection of gemstones will have the most significant impact.~
+@1200 = ~Let's get started then.~
+@1201 = ~And that, as they say, is that.~
+@1202 = ~Bah! As I feared, the device was only good for one shot.~
+@1203 = ~Your choices of gems were exceedingly poor. The bracers are still in the region, but I could only narrow it down to an area north of Firewine.~
+@1204 = ~Your choice of gems hampered the effectiveness of the device. The bracers are still in the region; look for a flower north of Firewine.~
+@1205 = ~It went just about as expected. The bracers are in Gullykin, as near as I can determine.~
+@1206 = ~Your selection of gems was very good. The bracers are in Gullykin, on a halfling woman.~
+@1207 = ~You could not have selected better gems. I could see the bracers clearly on an "Iris Cotton" in Gullykin.~
+@1208 = ~You must go and retrieve the bracers.~ 
+@1209 = ~If someone is wearing them, then do not try to remove them! They will likely disappear as they did for Melicamp.~
+@1210 = ~I cannot stress this enough. It would render all of our efforts so far moot.~
+@1211 = ~Go now, and return with the bracers.~
+@1212 = ~Please adventurers, you've got to help me.~
+@1213 = ~My wife Iris found these bracers and she just turned into a squirrel!~
+@1214 = ~I don't know what to do!~
+@1215 = ~Calm down. We're actually in Gullykin for just this reason.~
+@1216 = ~Sure, we can help. For a price.~
+@1217 = ~Looks like we found the cursed bracers.~
+@1218 = ~I am but a poor halfling, but you can the little gold I have, all 40 pieces of it, if you can save my wife.~
+@1219 = ~Sorry, but it'll cost you more than that.~
+@1220 = ~40 gold isn't even worth taking. C'mon you runt, we'll help you anyway. Keep your gold.~
+@1221 = ~Fork it over.~
+@1222 = ~Fine, I guess I'll just go see Alvanhendar.~
+@1223 = ~Thanks, I guess.~
+@1224 = ~Take it, take it!~
+@1225 = ~Please, how can you help?~
+@1226 = ~A mage near Beregost has been searching for these bracers. You need to travel to the High Hedge.~
+@1227 = ~We can help but you need to travel to the High Hedge, west of Beregost, to see the mage Thalantyr.~
+@1228 = ~A mage? Why not a priest? Alvanhendar, here in town, has performed services such as this in the past.~
+@1229 = ~These bracers carry an unusual curse. Alvanhendar may be able to remove the curse, but the bracers will disappear.~
+@1230 = ~Alvanhendar will not be able to help you.~
+@1231 = ~Thalantyr has been studying these bracers for some time and knows what to do with them.~
+@1232 = ~But my wife will be safe, right? Who cares if the bracers disappear, that's the whole point!~
+@1233 = ~But the bracers will move on to some other poor innocent, like your wife.~
+@1234 = ~True enough, I suppose. Head on over to the temple then.~
+@1235 = ~Trust us, it's safer just to see Thalantyr.~
+@1236 = ~I hadn't thought of that. Yeah, I wouldn't want someone else to go through this.~
+@1237 = ~We'll meet you over at the High Hedge then.~
+@1238 = ~How can you be so sure?~
+@1239 = ~We haven't been running across the Sword Coast in an idle attempt to destroy these bracers. Trust us.~
+@1240 = ~Thalantyr has already lifted the curse once. He can do it again.~
+@1241 = ~Nothing is for sure, but Thalantyr has been researching the matter quite a bit.~
+@1242 = ~Alright, I'll give this Thalantyr a try.~
+@1243 = ~Squeak!~
+@1244 = ~We've made it here safely.~
+@1245 = ~Good, <CHARNAME>, I was hoping you'd turn up soon.~
+@1246 = ~While you were out retrieving the Cottons, Melicamp and I have been doing some research.~
+@1247 = ~We think we've found *cluck* a way to remove the bracers but not have them disappear.~
+@1248 = ~The incantation takes three mages, though, so we'll need your help. Mr. Cotton, are you and your wife ready?~
+@1249 = ~As ready as we can, I suppose.~
+@1250 = ~Good, then let's begin.~
+@1251 = ~Wait a minute, what's the incantation?~
+@1252 = ~Right you are. Let's begin.~
+@1253 = ~I'm not ready! You haven't explained my role yet.~
+@1254 = ~Hold on, what am I supposed to do?~
+@1255 = ~There is no fixed incantation. It will be chanted in three verses of three. I will incant a line, then Melicamp, then you, and then we repeat the process.~
+@1256 = ~I do not know exactly what I will need to do, so you and Melicamp will have to follow and chant the proper words.~
+@1257 = ~Search for the patterns in the words. You are a mage, after all, and I expect you to show your intelligence.~
+@1258 = ~Let us begin.~
+@1259 = ~Avra boriden covra!~
+@1260 = ~Destius ennui *cluck* fristias!~
+@1261 = ~Bebeshia kikirt lalaji!~
+@1262 = ~Kukuty *cluck* nenerzuo poposh!~
+@1263 = ~Lopitaph heuroz zampe!~
+@1264 = ~Ephestues solidar *cluck* rillan!~
+@1265 = ~Nozika abersto omerth!~
+@1266 = ~Amari estus culirn!~
+@1267 = ~Gharmas huegas inferita!~
+@1268 = ~Tatagh yoyost wiwirshu!~
+@1269 = ~Xavros yuca zylenos!~
+@1270 = ~Now the final touch...~
+@1271 = ~Behold!~
+@1272 = ~And that, as they say, is that.~
+@1273 = ~Err. Again.~
+@1274 = ~Sorry for that, Miss Cotton, though I'm glad to see the curse lifted. I can supply you with some draughts to deal with your pain and discomfort.~
+@1275 = ~That was most unpleasant, though I thank you for your efforts.~
+@1276 = ~Honestly <CHARNAME>, were you even trying? It's a wonder the poor lass wasn't killed.~
+@1277 = ~And with the incantation butchered, naturally the bracers are gone. Melicamp, we have more work to do, though we shall definitely have to find more reliable help this time.~
+@1278 = ~Of course, *cluck* master Thalantyr.~
+@1279 = ~Well, thanks for your efforts anyway <CHARNAME>. I hope you at least managed to learn something from this.~
+@1280 = ~Well, it looks like the curse is lifted, at least. How do you feel, Miss Cotton?~
+@1281 = ~And it seems... yes, unfortunate. The bracers are gone. You flubbed too many lines, <CHARNAME>.~
+@1282 = ~Your services are no longer needed. Melicamp and I shall have another go at finding them.~
+@1283 = ~Well done, well done. Miss Cotton, does everything feel right?~
+@1284 = ~Yes, thank you! Though I do feel like some peanuts...~
+@1285 = ~That may *cluck* take a bit longer to pass.~
+@1286 = ~And at last, we have the bracers! Let me make one final adjustment to them to ensure they can't be worn.~
+@1287 = ~<CHARNAME>, with this powder, Taerom's forge should burn hot enough to destroy them at last.~
+@1288 = ~Thank you for your help.~
+@1289 = ~Thalantyr has sent us here to destroy some cursed bracers in your forge.~
+@1290 = ~What's he on about? He knows this is just a normal forge.~
+@1291 = ~He gave us these powders. He said they would make your forge hot enough to destroy the bracers.~
+@1292 = ~With this powder, your forge should be hot enough to break the curse.~
+@1293 = ~Well, he's usually right about these things. Though an idea occurs to me...~
+@1294 = ~<CHARNAME>, I may be able to forge something new once the bracers melt. Once imbued, materials sometime retain their powers, though in a weaker or changed manner, even after the item is broken or drained.~
+@1295 = ~I can't really predict what, if any, magical properties it may have. It may even remain cursed.~
+@1296 = ~If you don't want to take the risk, we'll simply scatter the remains on the coals and let it burn off.~
+@1297 = ~We've worked too hard to destroy them. I won't take the risk of simply forging a new cursed item.~
+@1298 = ~What could you make?~
+@1299 = ~Nay, destroy them. No good can come of their remains, no matter how reforged.~
+@1300 = ~We'll lose most of the metal in the forge and to Thalantyr's powder, though I expect we'll have enough for a piece of jewelry. An amulet, perhaps.~
+@1301 = ~Sure, we'll take that risk.~
+@1302 = ~Let's fire up the forge then.~
+@1303 = ~Thalantyr's powder worked like a charm!~
+@1304 = ~Well, we'll keep that forge plenty hot until we can burn off as much of those bracers as possible.~
+@1305 = ~Until then, we'll use the other forges just in case.~
+@1306 = ~And this is for you. Just in case, I'd strongly suggest identifying it before using it.~
+@1307 = ~We cannot proceed further until you find Melicamp. I sent him to see Taerom at the Thunderhammer Smithy.~
+//@1308 = ~Yes, but first we need to see your wares.~
+//@1309 = ~Understood.~
+@1310 = ~I am glad that Melicamp has returned. Now we just need Taerom to finish the mechanical device.~
+@1311 = ~We can proceed once Melicamp returns from the Thunderhammer Smithy.~
+@1312 = ~You must find those bracers and bring them here.~
+@1313 = ~Take those bracers and the powder to Taerom, so that we may finally be done.~
+@1314 = ~So... is that it?~
+@1315 = ~Yes, I'm afraid so.~
+@1316 = ~Oh, it's you again. Alvanhendar, these were the adventurers I mentioned.~
+@1317 = ~I've tried everything I know. Your mage friend may be their only hope now.~
+@1318 = ~We'll meet you at the High Hedge then.~
+@1319 = ~Thalantyr should have everything ready. Let's head out.~
+@1320 = ~We must endeavor to find those bracers, lest they curse some other unfortunate soul. <CHARNAME>, I will need all the help I can get, and you are an adventurer. Can you assist me?~
+@1321 = ~The incantation takes three people, though, so we'll need your help. Mr. Cotton, are you and your wife ready?~
+@1322 = ~What do we need to do next for the bracers?~
+@1323 = ~The bracers are still in the region, but I could only narrow it down to an area north of Firewine.~
+@1324 = ~The bracers are still in the region; look for a flower north of Firewine.~
+@1325 = ~The bracers are in Gullykin, as near as I can determine.~
+@1326 = ~The bracers are in Gullykin, on a halfling woman.~
+@1327 = ~I could see the bracers clearly on an "Iris Cotton" in Gullykin.~
+@1328 = ~Where did you say the bracers were again?~
+@1329 = ~What should I do with the bracers now?~
+@1330 = ~Is there anything else?~
+@1331 = ~This is a magnificent pearl, but I'm afraid it's too unseasoned for our purposes. I would be pleased if you found another.~
+@1332 = ~Black pearls need to age a bit before they're ready to be utilized in such a fashion.~
+@1333 = ~However, we will have to wait for Melicamp's return before we begin the divination.~
+@1334 = ~Speak of the devil and he shall appear. Let us begin.~
+
+// journal entries
+@1335 = ~Destroy the Cursed Bracers~
+@1336 = ~Destroy the Cursed Bracers
+
+Thalantyr asked for my help in destroying the bracers that cursed Melicamp, but I declined.~
+@1337 = ~Destroy the Cursed Bracers
+
+Thalantyr asked for my help in destroying the bracers that cursed Melicamp. Thalantyr has tasked us with the construction of a scrying device. While Melicamp goes to Beregost to work with Taerom, I must gather three different gems to power the device. I must pay attention and use my own discretion.~
+@1338 = ~Destroy the Cursed Bracers
+
+Thalantyr asked for my help in destroying the bracers that cursed Melicamp. Thalantyr has tasked us with the construction of a scrying device. While Melicamp goes to Beregost to work with Taerom, I must gather three gems to power the device. Thalantyr mentioned that black pearls are useful, but otherwise I must pay attention and use my own discretion.~
+@1339 = ~Destroy the Cursed Bracers
+
+I have provided Thalantyr with three gems to power the scrying device. However, Melicamp has not yet returned from visiting Taerom in Beregost, and Thalantyr has asked me to check on his progress.~
+@1340 = ~Destroy the Cursed Bracers
+
+I have provided Thalantyr with three gems to power the scrying device. Melicamp has not yet returned from visiting Taerom in Beregost, but I can't waste time to check on him. He'll return eventually.~
+@1341 = ~Destroy the Cursed Bracers
+
+Taerom didn't have the needed ore for the scrying device, so he sent Melicamp to visit his contact Grace at the Nashkel Mines. I should check on him there.~
+@1342 = ~Destroy the Cursed Bracers
+
+Grace provided Melicamp with some of the needed ore. It was not enough, so Melicamp has gone down into the mines to find more.~
+@1343 = ~Destroy the Cursed Bracers
+
+Melicamp's magic has backfired, destroying the memories of two miners. I refused to fix his mess, so he left with the miners to try and help him. I'm sure he'll eventually make his way back to Thalantyr's.~
+@1344 = ~Destroy the Cursed Bracers
+
+Melicamp's magic has backfired, damaging the memories of two miners, Sal and James. Melicamp suggests speaking with the other miners. If we can learn some details about them, we may be able to jog their memories and restore what's missing.~
+@1345 = ~Destroy the Cursed Bracers
+
+I helped the miner Sal by reminding him of his twin boys.~
+@1346 = ~Destroy the Cursed Bracers
+
+I helped the miner James by reminding him of his sweetheart in Beregost.~
+@1347 = ~Destroy the Cursed Bracers
+
+The miners have been saved, and Melicamp has given me the needed ore. While he heads back to Thalantyr I'll be taking the ore to Taerom to forge the scrying device.~
+@1348 = ~Destroy the Cursed Bracers
+
+I have given the ore to Taerom to forge the device. He says it will be ready in two days time.~
+@1349 = ~Destroy the Cursed Bracers
+
+Taerom has successfully forged the scrying device and given it to me. I should return to the High Hedge so that Thalantyr can search for the bracers.~
+@1350 = ~Destroy the Cursed Bracers
+
+Thalantyr has used the scrying device in an attempt to locate the bracers. However, my selection of gemstones was so poor that we could only narrow down their location to an area north of Firewine.~
+@1351 = ~Destroy the Cursed Bracers
+
+Thalantyr has used the scrying device in an attempt to locate the bracers. However, my selection of gemstones was poor and we could only narrow down their location to an area north of Firewine. Thalantyr says to look for a flower.~
+@1352 = ~Destroy the Cursed Bracers
+
+Thalantyr has used the scrying device in an attempt to locate the bracers. My selection of gemstones was adequate and we were able to narrow down the location to Gullykin.~
+@1353 = ~Destroy the Cursed Bracers
+
+Thalantyr has used the scrying device in an attempt to locate the bracers. My selection of gemstones was good and we were able to locate the bracers on a halfling woman living in Gullykin.~
+@1354 = ~Destroy the Cursed Bracers
+
+Thalantyr has used the scrying device in an attempt to locate the bracers. My selection of gemstones was excellent and we were able to locate the bracers on a halfling woman named Iris Cotton, living in Gullykin.~
+@1355 = ~Destroy the Cursed Bracers
+
+I have located the cursed bracers at last! We met Largo Cotton in Gullykin and discovered his wife Iris has been transformed into a squirrel. Largo wants to see if the local priest, Alvanhendar, can help before traveling to the High Hedge. I should meet them at the local temple here in Gullykin.~
+@1356 = ~Destroy the Cursed Bracers
+
+I have located the cursed bracers at last! We met Largo Cotton in Gullykin and discovered his wife Iris has been transformed into a squirrel. I have convinced Largo to travel to High Hedge and speak with Thalantyr. I should travel there as well.~
+@1357 = ~Destroy the Cursed Bracers
+
+Unfortunately the local cleric Alvanhendar was not able to help Iris Cotton with the curse from the bracers. The Cottons are traveling to meet Thalantyr at High Hedge. I should travel there as well.~
+@1358 = ~Destroy the Cursed Bracers
+
+Thalantyr, Melicamp, and I have managed to free Iris Cotton from the cursed bracers. I'm afraid I didn't get my part of the incantation correct and Iris was hurt and the bracers are gone.
+
+Thalantyr has thanked me for my efforts, and my part in this is done. Thalantyr and Melicamp will try to find the bracers without me.~
+@1359 = ~Destroy the Cursed Bracers
+
+Thalantyr, Melicamp, and I have managed to free Iris Cotton from the cursed bracers. I flubbed some of the incantation, but Iris has come through with only some discomfort, but the bracers are gone.
+
+Thalantyr has thanked me for my efforts, and my part in this is done. Thalantyr and Melicamp will try to find the bracers without me.~
+@1360 = ~Destroy the Cursed Bracers
+
+Thalantyr, Melicamp, and I have managed to free Iris Cotton from the cursed bracers. The incantation was good enough that Iris came through with no side effects.
+
+I should take the bracers, alongside a special powder provided by Thalantyr, to Taerom in Beregost. The powder will allow his forge to burn hot enough to destroy the bracers once and for all.~
+@1361 = ~Destroy the Cursed Bracers
+
+Thalantyr, Melicamp, and I have managed to free Iris Cotton from the cursed bracers with a perfect incantation.
+
+I should take the bracers, alongside a special powder provided by Thalantyr, to Taerom in Beregost. The powder will allow his forge to burn hot enough to destroy the bracers once and for all.~
+@1362 = ~Destroy the Cursed Bracers
+
+The bracers are destroyed at last, reduced to slag in the magically-enhanced heat of Taerom's forge. Taerom offered to try and forge the leftovers into a new magical item, but coming from cursed stock, I did not want to risk it.~
+@1363 = ~Destroy the Cursed Bracers
+
+The bracers are destroyed at last. The magically-enhanced heat of Taerom's forge destroyed them, and Taerom was able to forge a new item out of its remains. Whether the item retains some of their original cursed energy, or are instead a beneficial item, remains to be seen.~
+
+
+/*
+*1 quest accepted, promps meli cutscene
+*2 after cutscene
+*3 in thalantyr's post-cutscene dlg
+*4 one gem returned
+*5 two gems in
+*6 all three gems, go see taerom
+7 taerom met, go see grace at mines
+8 grace spoken with
+9 meli spawned in nashkel
+10 miners fixed, meli returning, go speak to taerom again
+11 device in progress
+*12 device ready
+13 melicamp-nashkel stuff skipped
+14 melicamp returns device
+15 thalantyr does divination
+*16 divination cutscene done
+17 go get bracers from halflings
+18 halfling cutscene, dialogue; goes to 19 or 80
+*19 halflings sent to high hedge
+20 incantation complete, go to cutscene
+*21 cutscene complete
+22 bracers removed badly, quest over
+23 bracers removed, take 'em to taerom
+24 spoken to taerom, start cutscene
+25 cutscene end, last taerom dialogue
+26 quest over, completed successfully
+
+80 cottons move to the local temple and try to get Alvanhendar to help - he can't, routed back to 19
+
+98 refused quest
+99 melicamp gone on quest instead
+*/
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Fighter - Expanded Gnoll Stronghold              \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+@10000 = ~Expanded Gnoll Stronghold~
+@10001 = ~Argh, I saw you coming... Now I will see you fall! Arg! Auu!~
+@10002 = ~Gnoll-Weakling~
+@10003 = ~Shaman Sirkhr~
+@10004 = ~Gnoll Witherling~
+@10005 = ~Chieftain Hvalanya~
+@10006 = ~Watchdog Purkht~
+@10007 = ~Captain Stilind~
+@10008 = ~Amnian Soldier~
+@10009 = ~Amnian Scout Manlytoe~
+@10010 = ~Kalvranalan~
+@10011 = ~Staff of Corrosive Thoughts +1~
+@10012 = ~Belt of Omens~
+@10013 = ~This unusual belt was created for an assassin named Mudbone. He was specialized in killing priests, especially those that were considered obstacles to those who had very little respect to people of faith. The belt looks well made. It must have been made using high quality materials.
+
+STATISTICS:
+
+Damage:  +2 bonus vs. Clerics
+Magic Resistance:  2%
+
+Weight: 2~
+//@10014 = ~~
+@10015 = ~Chain of Primitive Respect +1~
+@10016 = ~There is something really raw and primitive about this chain mail, but you sense some magical energy from its links. It should be able to protect its user in battle and the magic may prove to be helpful while in the wilderness. However, the armor has a strange scent that reminds you of dog's fur.
+
+STATISTICS:
+
+Equipped Abilities: Armor Class vs. Animals: +2
+Equipped Abilities: -1 Charisma
+Armor Class: 4
+Weight: 20
+Requires: 8 Strength
+Not Usable By:
+ Druid 
+ Mage 
+ Thief~
+@10017 = ~Nook~
+@10018 = ~Cloak of Shape Stability~
+@10019 = ~This cloak was made of enchanted fabric that may prove to be quite useful when fighting enemies like basilisks, protecting its user from their deadly gaze.
+
+STATISTICS:
+
+Special Abilities: +4 bonus to all saves vs. polymorph~
+@10020 = ~Archway~
+@10021 = ~Amulet of Dark Misfortune~
+@10022 = ~This amulet was cursed with some dark magic. Whoever wears it suffers from bad luck, and when on the road or during an adventure... luck may prove to be a matter of life and death.
+
+STATISTICS:
+
+Luck:  reduced by 1
+Special:  can only be removed by a 'remove curse' spell~
+@10023 = ~Temple to the Beast of Butchery~
+@10024 = ~Broken Spirit Arrow +1~
+@10025 = ~This arrow looks broken, but even when you hold one half of it, the other half levitates right next to it. Even though it's not really powerful, it may be useful in situation when an adventurer runs out of normal arrows.
+
+STATISTICS:
+
+Returns to the wielder when shot
+
+Special: Strikes as a +1 weapon
+Damage:  1
+Damage Type:  missile (piercing)
+Weight: 0
+Launcher:  Bow
+Not Usable By:
+ Cleric
+ Druid
+ Mage~
+@10026 = ~Gnoll Stronghold Interior~
+
+/*
+The staff of Corrosive Thoughts uses @10011 as its name. on EE, this staff uses @10028 as its descript 
+and boosts acid damage +10%. Since this can't be done on the original engine, there it has the ability 
+to cast Melf's Acid Arrow once per day and uses @10027
+*/
+@10027 = ~This staff was previously used by a Gnoll Shaman from the Gnoll Stronghold on the Sword Coast.
+
+It is hard to say who created it. It feels quite raw and while its power isn't the most powerful, there are certainly situations when it may be used. 
+
+STATISTICS:
+
+Special Abilities: Can cast Melf's Acid Arrow once per day
+THAC0: +1
+Damage: 1d6+1
+Damage type: crushing
+Speed Factor: 3
+Proficiency Type: Staff
+Type:  2-handed
+Requires: 5 Strength~
+@10028 = ~~ // see ee.tra
+
+@10029 = ~Cloak of the Regent-Warrior~
+@10030 = ~This purple cloak has quite a majestic aura and it is believed to have been created for a king, but... the legend does not specify which one. It is meant not only to protect the one that uses it, but also make those around them believe their every word and worship them.
+
+You were given this cloak as a token of trust and gratitude for securing the Gnoll Stronghold.
+
+STATISTICS:
+
+Armor Class:  +1 bonus
+Saving Throw:  +1 bonus
+THAC0: +1 vs. fighters, monks, paladins, rangers
+Damage: +1 vs. fighters, monks, paladins, rangers
+Charisma:  Once per day, add 1d4 Charisma for ten turns (fighters only)
+Weight:  3~
+@10031 = ~Gnoll's Ritual Book~
+@10032 = ~This book describes rituals: some to tame the natural energy and some to please Yeenoghu, the Beast of Butchery. One ritual is especially morbid, describing the burning of human skulls.~
+@10033 = ~Medical Supplies~
+@10034 = ~This bag is filled with medical supplies.~
+@10035 = ~Meat~
+@10036 = ~Yeenoghu's Burning Flesh~
+@10037 = ~This burning meat is actually Yeenoghu's burning flesh. Those that decide to consume it may gain special blessing of the Prince of Gnolls, but it comes with a price.
+
+STATISTICS:
+
+Special: If consumed it lowers Charisma by 1, but provides +2 Damage vs. Good creatures. The bonus is permanent.
+
+Weight: 2~
+@10038 = ~Primitive Key~
+@10039 = ~You found this primitive key at the Gnoll Stronghold. It must open something at that location.~
+@10040 = ~I was asked to tell you that "hope walks the Athkatlan streets".~
+@10041 = ~Ah, intrepid adventurers at our door. Helm guards over all the realms, and his servants are at your disposal. The Vigilant One stands ready to mend thy ailments and so divert the unyielding gaze of the Great Guide... for a suitable donation, of course. Just to demonstrate our mutual goodwill, you understand.~
+@10042 = ~What kind of services do you provide?~
+@10043 = ~I don't need anything from you right now. Goodbye.~
+@10044 = ~Hmm? I understand you say that for a reason. You're here for the supplies I was asked to prepare in case of an emergency, yes?~
+@10045 = ~Yes.~
+@10046 = ~Well, how do you think?~
+@10047 = ~My duty is not to question you but to give you this. Take this chest and bring it to those that need it.~
+@10048 = ~Know that Helm shall watch over you.~
+@10049 = ~Argh! We... have some guests... Grr! Foolish things! You know not to bother Chieftain Hvalanya?!~
+@10050 = ~No, I don't think anyone mentioned that on my way here. But they were all busy being dead.~
+@10051 = ~I am sorry, Hvalanya, but I cannot let you attack people of the Sword Coast. I'm here to stop you.~
+@10052 = ~Hahahaha! You are a funny small thing! Me and my boys will show you that you do not just bark at Chieftain Hvalanya and expect to get out of this in one piece! Auuu!~
+@10053 = ~I salute you, friend.~
+@10054 = ~You! Argh, your kind know not when to leave gnolls alone...! Evil old ones, hated by strong gnolls, even the chieftain.~
+@10055 = ~Who are you?~
+@10056 = ~Now, now. That's quite a collection of things you've got here. Impressive for someone of your kind.~
+@10057 = ~Now you ask...?! After you kill old or hurt gnolls? Argh!~
+@10058 = ~This is all mine...!~
+@10059 = ~Old gnolls deserve respect and we... took this place. And this room, where an old priest used to live. Now he dead. Now I use this place.~
+@10060 = ~Many of other gnolls treat me and old and weaker gnolls like sick dogs! They laugh! Piss at us! But even though we live under their home, we know our worth... We know our strength!~
+@10061 = ~We praise Yeenoghu! And we kill. And we eat. Even if we need to eat our own... but you...~
+@10062 = ~You may be so much more tasty... We will feast today.~
+@10063 = ~Be careful, adventurers. This is a dangerous place... I... I lost most of my people to monsters that occupy nearby stronghold. You look like a good warrior, <PRO_RACE>, but these creatures here are fierce!~
+@10064 = ~What happened to those people you speak of? Are they dead?~
+@10065 = ~They must have been weak if they died because of some crude creatures.~
+@10066 = ~They were good men and women... We came here to claim this place. It should belong to Amnian army, not to these creatures. We were sent here from Athkatla, to investigate the place and see if a small group may quietly eliminate the gnolls and turn this into an operation point.~
+@10067 = ~We fell into a trap. They threw boulders on us, others were killed with their halberds and blades.~
+@10068 = ~Minsc is not afraid of those creatures. They're evil and evil will always have its butt properly kicked, eventually! Most likely by Minsc and Boo. *squeak*~
+@10069 = ~Well, of course the unprepared will always fail. (That is why one always needs a proper plan. And some buffoons that may be used as cannon fodder.)~
+@10070 = ~P-poor people. I c-can only imagine how difficult it may feel t-to lose trusted friends...~
+@10071 = ~I am the only one that survived this. But... you look strong. Perhaps you could actually survive.~
+@10072 = ~Perhaps we can still do something about this. Since we are already here, perhaps we can help you and avenge your people.~
+@10073 = ~Well, poor you. I suppose you should get back home and thank whichever god you serve for sparing you your pathetic life. Now excuse me, but I need to go.~
+@10074 = ~You want to help me? That... that would be truly wonderful.~
+@10075 = ~What I found out is that there are two groups here. The weaker gnolls, old ones, and those that were hurt and no longer are as useful as they used to be. They are led by some shaman.~
+@10076 = ~But there is also another group of the younger, stronger gnolls. They are led by their chieftain. A female gnoll. They call her "Chieftain Hvalanya". She is said to be quite cruel. At least that's what we deduced from how they speak about of her.~
+@10077 = ~They both need to be stopped if we are to take over this place. But there is also a third individual that should also be stopped...~
+@10078 = ~A third one?~
+@10079 = ~Who is the third? Just tell me already!~
+@10080 = ~The third one isn't exactly a leader, but some sort of... watchdog. He's usually standing on one of the towers. I'm not sure which one, though.~
+@10081 = ~Hmm, but it may be a good idea to take him down too. So, two leaders and a watchdog.~
+@10082 = ~That's all? Hah! They'll be dead before you can say "my whole squad died".~
+@10083 = ~Precisely.~
+@10084 = ~Seriously? Their death is a tragedy. Do not mock it.~
+@10085 = ~Killing these three gnolls should make others run or hide. They won't be a real thread without the most important members of their pack or clan or whatever they call themselves!~
+@10086 = ~Are you sure that's something you can handle? You look strong, but I just need to ask you that. There are so damn many of them.~
+@10087 = ~No worries. I know what I'm doing.~
+@10088 = ~We won't know until I try.~
+@10089 = ~If I decide there are too many of them, I'll just run.~
+@10090 = ~Right. If you think you stand a chance against them, and if you manage to kill those three, please, return to me and let me know that lives of my friends were not wasted for nothing.~
+@10091 = ~You are a cruel person. Perhaps with time you will understand that... that this place must be freed from under the influence of these creatures. If you do, return to me then.~
+@10092 = ~It's you again? Are you here to mock me and my dead friends.~
+@10093 = ~Remind me: what happened to your friends?~
+@10094 = ~I care little about you or them. Goodbye.~
+@10095 = ~Ah, you return. Have you managed to deal with the gnoll leaders and the watchdog?~
+@10096 = ~Yes. They are all dead. It looks like the gnolls are mostly gone, but there may be some of them here and there. Without leaders they should be easy targets.~
+@10097 = ~I am still working on this.~
+@10098 = ~You... you've really done it! I wish my friends were here to listen to this. But I want to believe there are part of this. Part of this victory. But the work isn't done just yet. There is still much to do.~
+@10099 = ~Let's meet deeper in the stronghold, near the top of the stairs. There we should continue our mission. If you're interested that is. But let me tell you it will be worth your time, my warrior-friend.~
+@10100 = ~Hmm. All looks good... Now, I managed to send a signal from the tower, as I would mention to the scouts south from here. I think they may send me few more people, but I don't want things to go bad again.~
+@10101 = ~And I presume you need me to do something to prevent such things from happening, correct? Tell me, how can I help.~
+@10102 = ~Sorry, but I don't have time for helping you.~
+@10103 = ~There is mining town nearby. Nashkel is its name. There is a temple there and I would like you to go there and bring me some medical supplies. The priest was informed that we may need some help, if I'm correct. A pity we haven't talked to him before I lost my friends, maybe if we had those--no. It wouldn't prevent that tragedy. I'm sorry, they're still on my mind.~
+@10104 = ~It is now that we may need those supplies. The stronghold may have been cleared, but who knows, maybe there are more of these creatures roaming these mountains and trails. So while we wait for more men and women to come here and aid me, perhaps you could go to Nashkel and ask the priest for the supplies.~
+@10105 = ~And will the cleric just believe me that you sent me?~
+@10106 = ~It feels like an easy task. I know where Nashkel is.~
+@10107 = ~Sorry, but no. I don't have time for this. Actually, I need to go. Goodbye.~
+@10108 = ~All you need to do is say: "Hope walks the Athkatlan streets." He'll know that you were sent for the supplies.~
+@10109 = ~Sounds easy.~
+@10110 = ~Sounds easy. Can't you do it yourself?~
+@10111 = ~It sounds boring and... I don't have time for this. Goodbye.~
+@10112 = ~It is.~
+@10113 = ~I need to wait for the reinforcements. Besides someone needs to stay here.~
+@10114 = ~The hard part may be reaching Nashkel, but if you know the way, it's going to be easier for you. Easier than it would be for me to go there on my own.~
+@10115 = ~Help me with the task, please. I really need your help.~
+@10116 = ~Once you have the supplies, just come here. And I'll start thinking how I may reward you when all the situation is under complete control.~
+@10117 = ~You're back, I see. Do you have the supplies?~
+@10118 = ~I have the supplies here.~
+@10119 = ~I'm still working on this. I'll let you know once I have them.~
+@10120 = ~Splendid! Just in time! Look! The reinforcements are here!~
+@10121 = ~Manlytoe! Here!~
+@10122 = ~It's good to see you alive, Stilind! Where are the others?~
+@10123 = ~They're...~
+@10124 = ~...~
+@10125 = ~I'm really sorry, Stilind. I truly am. Was Mandar with them? I know the two of you were inseparable.~
+@10126 = ~Yes. He... he's gone, too...~
+@10127 = ~Gods, his family will be devastated.~
+@10128 = ~I'll tell them. Once I'm back. Once our mission is over.~
+@10129 = ~Let's... focus on the matters at hand. Please.~
+@10130 = ~Of course. What's the situation?~
+@10131 = ~The Stronghold is secured. I got help from this brave fighter over here.~
+@10132 = ~Well... you're welcome.~
+@10133 = ~I'm doing it for a reward. I hope that's clear.~
+@10134 = ~You must be quite strong. Good work.~
+@10135 = ~I see. That's... good to know.~
+@10136 = ~It must have been difficult, facing all these creatures.~
+@10137 = ~Yes... In case things went bad again, our friend here fetched the medical supplies for us. The ones from Nashkel.~
+@10138 = ~Good. But let's hope we won't need them.~
+@10139 = ~Right.~
+@10140 = ~You and your people should rest now and check these halls and walls by yourself. It may prove to be useful. Meanwhile, there is one last favor I need to ask our helper. Talk to me when you're ready.~
+@10141 = ~You helped us a lot, my friend. But there is one last favor I need to ask you.~
+@10142 = ~What is it?~
+@10143 = ~Sorry, but I don't have time for this. I should be going.~
+@10144 = ~You see, when you left for Nashkel, I found out there is a strange creature in the tower over there. There is a crack in the wall and... that tower seems to be haunted by some bizarre ghost.~
+@10145 = ~I'm unsure if any of those men and women have any experience fighting ghosts so I hoped that maybe you could slay it for us. I promise this is going to be the last favor I will ever ask you. And when it's over, you will get something from me.~
+@10146 = ~You helped us greatly so that would be only fair.~
+@10147 = ~So... a ghost you say...~
+@10148 = ~No. I'm done helping you. I need to go now. Goodbye.~
+@10149 = ~Yes. Help us, please. I promise that what I've got for you is really worth it.~
+@10150 = ~Hello, friend! Have you managed to slay the ghost I told you about?~
+@10151 = ~Yes. It will no longer cause you distress.~
+@10152 = ~No, not yet. Goodbye.~
+@10153 = ~Gods! You are truly one of the mightiest warriors I have ever met.~
+@10154 = ~This mission isn't a failure thanks to you. We will use this place to make sure travels from Athkatla to Nashkel will be safer from now on.~
+@10155 = ~As I promised, I have something for you. A special cloak that will protect you. I hope it will serve you well. Furthermore, take these few coins. Six hundred gold pieces. I know it's not much, but... that's all I can offer.~
+@10156 = ~Thank you for everything you've done for us. You can be sure your name will be a synonym of a fearless warrior for all of us here.~
+@10157 = ~I'm always happy to see you, my friend.~
+@10158 = ~I suppose I should clean my sword later.~
+@10159 = ~Gods, I really hope we won't die here.~
+@10160 = ~I'll do some push-ups before sleep.~
+@10161 = ~The path here was a dangerous one, but I really believe we can do some good work here.~
+@10162 = ~Gnoll Stronghold Interior - Second Level~
+@10163 = ~Gnoll Stronghold - Spooky Room~
+@10164 = ~Gnoll Stronghold - Western Storage Room~
+@10165 = ~Gnoll Stronghold - Eastern Storage Room~
+@10166 = ~Well, the place isn't in its best shape, but I believe that with some resources it can be fixed. Walls can be patched. That will require some gold, but... none of this is impossible. I brought some goods here, in case we need some weapons or potions.~
+@10167 = ~It's good to see you again.~
+@10168 = ~If you need something, I can show you what I've got.~
+@10169 = ~Show me your goods.~
+@10170 = ~I think I've got everything I need. Goodbye.~
+@10171 = ~Farewell.~
+@10172 = ~Quartermaster~
+@10173 = ~Securing the Gnoll Stronghold~
+@10174 = ~Securing the Gnoll Stronghold
+
+I met Captain Stilind at the entrance to the Gnoll Stronghold. He wanted help with some nonsense and I declined.~
+@10175 = ~Securing the Gnoll Stronghold
+
+I met Captain Stilind at the entrance to the Gnoll Stronghold. He's the last remnant of a troop sent from Athkatla to secure the Gnoll Stronghold. He's asked for my help in defeating their leader, Chieftain Hvalanya, as well as a shaman from a rival group. There's also a gnoll watching from one of the towers that must be defeated as well.~
+@10176 = ~Securing the Gnoll Stronghold
+
+We have defeated the gnoll leader, Chieftain Hvalanya.~
+@10177 = ~Securing the Gnoll Stronghold
+
+Shaman Sirkhr, the rival gnoll faction's leader, has been defeated in an old temple under the Stronghold.~
+@10178 = ~Securing the Gnoll Stronghold
+
+The watcher from the towers, Purkht, has been killed.~
+@10179 = ~Securing the Gnoll Stronghold
+
+I have defeated the three gnolls as requested by Captain Stilind. I should report back to him at the entrance to the Stronghold.~
+@10180 = ~Securing the Gnoll Stronghold
+
+Captain Stilind is confident the other gnolls will scatter, now that their leaders are gone. He's asked me to meet him deeper in the Stronghold.~
+@10181 = ~Securing the Gnoll Stronghold
+
+Stilind has asked me to get medical supplies while he awaits reinforcements from Athkatla. I should travel to the Temple of Helm in Nashkel and tell the priest "Hope walks the Athkatlan streets".~
+@10182 = ~Securing the Gnoll Stronghold
+
+I should return to Captain Stilind in the Gnoll Stronghold with the medical supplies from Nalin.~
+@10183 = ~Securing the Gnoll Stronghold
+
+With his medical supplies in hand and reinforcements at his back, Captain Stilind is now in firm command of the Gnoll Stronghold. He'd like to speak to me later of one more task.~
+@10184 = ~Securing the Gnoll Stronghold
+
+Captain Stilind has asked me to investigate a ghost, lurking in a crack in the wall on the next level.~
+@10185 = ~Securing the Gnoll Stronghold
+
+Captain Stilind's ghost is no more. I should report my success.~
+@10186 = ~Securing the Gnoll Stronghold
+
+The Gnoll Stronghold is now a stronghold of Amn, thanks to my efforts. I've been well rewarded for my work by Captain Stilind.~
+@10187 = ~Halberd of the Chimera~
+@10188 = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has a series of runes along its handle, allowing the wielder to imbue strikes with their choice of additional electrical, cold, or fire damage. It will occasionally release a burst of all three elements on a single strike. 
+
+STATISTICS:
+
+Combat Abilities:
+   1% chance per hit target will take an additional 3 points each of cold, electrical, and fire damage
+
+THAC0:  +1 bonus
+Damage:  1D10 + 1
+Damage type:  piercing
+Special:  +1 cold, electrical, or fire damage (wielder's choice)
+Weight: 14
+Speed Factor: 8
+Proficiency Type: Halberd
+Type:  2-handed
+Requires: 13 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+@10189 = ~Electricity~
+@10190 = ~Cold~
+@10191 = ~Fire~
+@10192 = ~Tensions are rising with Baldur's Gate, and this stronghold commands a good section of the coast. We were going to proceed to the Nashkel Mines after finishing here. But we were noticed.~
+@10193 = ~It may be a formidable foe and you may not be up to the task at the moment. We can place some simple wards to keep the ghost contained until you're ready.~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Peaceful Kaishas resolution                      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+@21604 = ~Why must we fight? Cannot let you leave knowing all this. We could have existed peacefully, but now you have fought and will never accept. Others will come to kill or capture. Adventurers like you always come, do they not? No, I must fight, and you must die! We may still have hope if Selaad returns, but you cannot help anymore.~
+@21605 = ~Kaishas, we fought only because we were forced to. It was not our doing, but yours, and there is no need for it to go on.~
+@21606 = ~We were forced to fight, Kaishas, and we fought well--do you really think you can stop us boarding this ship?~
+@21607 = ~Your village and the tunnels beneath it are now filled with the corpses of your kind. If you really want to fight then so be it, but you're making a mistake.~
+@21608 = ~Die, then--if you are a monster, I shall treat you as one.~
+@21609 = ~Such generosity, but if you leave you will exterminate anyway. Others will come, other fools just to fight the "evil" we are. No, we must remain alone here now, and so must you. Die and sleep, and you will not know the loneliness. Perhaps if Selaad returns we will try again. Until then, we stay.~
+@21610 = ~Kaishas, there is no need for this. This isn't my choice, but we'll kill you if we have to. Do you really think you can stop us where Karoug and Daese couldn't?~
+@21611 = ~ I... fear that we cannot. But we shall try. No choice remains to us.~
+@21612 = ~Kaishas, this is insane. You are going to your death, and I don't even want to kill you!~
+@21613 = ~Perhaps not. But you are wounded and tired, and the pack is close behind you. Even adventurers can fight only so long. Regardless, it must be so. Truly, I am sorry.~
+@21614 = ~The Mysterious Island
+I have reluctantly fought with Kaishas. She seemed to think there was no other way. She mentioned they might have a second chance if Selaad returned one day. He was their missing chieftain, if I remember correctly.~
+@21615 = ~Perhaps monsters we are. But we do what we must to survive.~
+@21616 = ~ You only remind me that this must be. Too much has happened between us. I do not know whether we can stop you or not, but the answer will be known swiftly.~
+@21617 = ~What choice is there? If truth is known, ruin will come to us!~
+@21618 = ~Then so be it.~
+@21619 = ~You can trust us. We'll tell no one about your people--it will be as if we never came to this place.~
+@21620 = ~Die well... I am truly sorry that it ends this way.~
+@21621 = ~How much I would like to believe you! But understand well, the future of my people is at stake here. I cannot take chances.~
+@21622 = ~We've been risking our lives for your damn people every day since we washed up here! What more do we have to do to persuade you? How many more babies do we have to save from wolfweres? ~
+@21623 = ~We've been risking our lives for your damn people every day since we washed up here! What more do we have to do to persuade you?~
+@21624 = ~You can do nothing. Truly, I am sorry.~
+@21625 = ~You... can do nothing. Maralee will be grateful forever for your deed.... as will I. But brave though it was, you did it without realizing our true nature.~
+@21626 = ~And now I do. Prepare yourself, Kaishas--this ends now.~
+@21627 = ~This grows ridiculous. Your ingratitude sickens me--I'd hoped that I wouldn't need to see you as a monster, but it looks as if I was wrong.~
+@21628 = ~Kaishas, do you take me for a fool? I knew you were werewolves before I even spoke to Karoug... frankly I was damn suspicious within five minutes of entering the village! If you're going to try to kill us then go right ahead, but for Ao's sake give us some credit for intelligence!~
+@21629 = ~I give you much credit, for intelligence and bravery both. Yet a headwoman's duty is all. I cannot risk that you lie.~
+@21630 = ~Kaishas, please, wait! <CHARNAME> isn't lying! We grew close... long after <PRO_HESHE> must have realized the truth about us! Spare <PRO_HIMHER> - <PRO_HESHE> may know our nature, but <PRO_HESHE> will keep our secret.~
+@21631 = ~ I...~
+@21632 = ~Kaishas, my Peladan is still alive because of these outsiders. Do I have to let him grow up knowing that we slaughtered Peladan's savior? That we are monsters in truth as well as form?~
+@21633 = ~I... I have been a fool. Forgive me, <CHARNAME>, that I brought us to the brink of kinship with the beasts. But we are better than Karoug... thank you for knowing that, even as I forgot it.~
+@21634 = ~Go, in peace. I do not know what will befall when you confront my husband. Greatly I fear for him, but he brings his fate upon himself. If he will not take back the gift willingly... then you must do what you must do.~
+@21635 = ~One day, I hope, Peladan will have a <PRO_BROTHERSISTER>. <PRO_HISHER> name will be "<CHARNAME>".~
+@21636 = ~We will never meet again, <CHARNAME> It.. grieves me. Remember me, even as you forget all else about our people.~
+@21637 = ~I managed to persuade Kaishas Gan to let us leave in peace... with a bit of help from Delainy. A lovely girl, but some things are not meant to be, I suppose.~
+@21638 = ~I managed to persuade Kaishas Gan to let us leave in peace... with a bit of help from Durlyle. There was something special between us... but some things are not meant to be, I suppose.~
+@21639 = ~Indeed it does. Truly, I am sorry.~
+@21640 = ~You shame me, outsider. Great is our debt to you. Yet a headwoman's duty is all. I cannot risk that you lie.~
+@21641 = ~You have returned! And you are pack... I smell it on you. But where is Kaishas? Where is my mate?~
+@21642 = ~Why did you send us? What was meant to happen on that island?~
+@21643 = ~She remained on the island. Your mate would have killed us when we rejected the curse she laid upon us... but at the last she saw wisdom. Lift the "gift" from us and return to her, "Mendas". There is nothing here for you.~
+@21644 = ~The log book was nothing! Balduran was nothing! He refused the gift that grandfathers offered him. You were only to give sea charts to Kaishas and kill Karoug so he could not follow. Kaishas would have brought pack here, where I have prepare place for them. Miserable ones! You could not accomplish such simple things? Instead you abandon my family and steal the boat to save your cruel selves?~
+@21645 = ~It is time to end this banter now, Mendas. It is time that you pay for your lies and your evil. Prepare to die.~
+@21646 = ~This ends here. Lift the "gift" from us, Mendas, and return to your mate. There is nothing here for you.~
+@21647 = ~Dogs! You are not fit to die at my hand but die you shall! To me, Baresh! A bloody reckoning is at hand!~
+@21648 = ~The Mysterious Island
+The mystery of this island has become clear. Mendas/Selaad sent us to the island on the false pretenses of retrieving evidence from what was believed to be Balduran's shipwreck. It was indeed the adventurer's ship, though his personal fate yet remains a mystery. Balduran's crew were infected with lycanthropy sometime during that fateful voyage. The ship was beached and wrecked leaving the two strains of lycanthropes, werewolves and wolfweres, to fight amongst themselves for survival. The more organized werewolves built the village that we recently shipwrecked near on our own fateful voyage. The chaotic wolfweres took residence in the ruins of Balduran's ship and both packs survived in uneasy co-existence since then. Mendas/Selaad eventually took the risk of sailing for the mainland. Somehow he made it and, upon discovering that someone had finally found the island, made up a plausible tale and had us first steal the sea charts, and later travel to the island to put them in his werewolf mate's hands. She had us kill the wolfweres and then infected the party with lycanthropy, intending us to join the pack or die fighting, but we persuaded her to let us leave peacefully. We sailed home to finally discover the truth of Mendas' duplicity. Fate seems to enjoy toying with me.~
+@21649 = ~I am puzzled, Mendas, or should I say Selaad. Since you are the leader of the werewolves, why did you not sail back to the island yourself?~
+@21650 = ~I am no sailor. I stay to prepare place for my people. For generations we have been trapped on island. It is time to return home to the land of grandfathers' birth. They needed charts and I needed adventurers who do not ask too much questions. Yet you have failed. I ask again--where is Kaishas?~
+@21651 = ~"Lift" it? My foolish mate, what have you told them? It is not a curse to be lifted--it is a gift to be savored! It can only be "cured" by killing the chieftain of the werewolves. I am chieftain and I judge you unworthy to run with my pack. You will die here today. To me Baresh! A bloody reckoning is at hand!~
+@21652 = ~Selaad Gan is the chief of the true people. He awaits the return of his mate Kaishas. Why have you not returned with her?~
+@21653 = ~It is not your place to question me. What part do you play in this?~
+@21654 = ~It seems that we have been deceived. Kaishas is dead and her murderous ilk died with her.~
+@21655 = ~We were hired to retrieve the logbook of Balduran. Here we have brought it and now we expect payment.~
+@21656 = ~It seems that we have been deceived. Kaishas remains on the island. We must confront Selaad and have him remove this curse which his mate has foolishly bestowed upon us.~
+@21657 = ~The master wishes to see his wife, Kaishas Gan. Is she on the vessel still?~
+@21658 = ~It is not your business. Step aside.~
+@21659 = ~Who is your master? We work for Mendas of Waterdeep.~
+@21660 = ~I am Baresh. I am of the true race as you are not. The master wishes to see his wife, Kaishas Gan. Is she on the vessel still?~
+@21661 = ~The book is nothing! Thy task was to rescue the master's kin. Where is the master's mate, Kaishas?~
+@21662 = ~Thy task was clear. Travel to the island-home and retrieve master's kin. Failing that, Kaishas was to take the sea charts from thee. Useless manlings! Selaad does not brook failure well.~
+@21663 = ~Idiot! We were sent on false pretenses and somehow it is our fault? Kaishas attacked us and we were forced to defend ourselves. Mendas was betrayed by his own cleverness.~
+@21664 = ~Mendas deceived us. He is the one that we must confront. You are merely a flunky.~
+@21665 = ~Idiot! We were sent on false pretenses and somehow it is our fault? Now, take us to Selaad!~
+@21666 = ~Useless wretch! The master will eat thy marrow for this!~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -136,3 +1007,703 @@ Beast Master~
 @40020 = ~Intelligence Modification~
 @40021 = ~Strength Modification~
 @40022 = ~Gullykin Temple~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// shaman - Dreamheart                              \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+// since this component is ee-only, I've put all strings in ee.tra
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Monk - Restoring Saiai no Hito                   \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+@70001 = ~Inoshishi~
+@70002 = ~Vaxffee the Greedy~
+@70003 = ~Scavenger Tymothy~
+@70004 = ~Moaning Troll~
+@70005 = ~Blade Amulet~
+@70006 = ~This amulet would normally be hidden in a hilt of a katana, right under the leather tidings. This specific amulet looks really old.~
+@70007 = ~Sword Hilt~
+@70008 = ~This looks like a hilt of a broken katana. It may be part of the Saiai no Hito, a Kozakuran sword of formidable reputation, made by Ne Kurosuna with another monk, Shiroume Yakuchi, in mind. 
+
+Perhaps it can still be fixed... once its blade is found.~
+@70009 = ~Sword Blade~
+@70010 = ~This looks like a blade of a broken katana. It may be part of the Saiai no Hito, a Kozakuran sword of formidable reputation, made by Ne Kurosuna with another monk, Shiroume Yakuchi, in mind. 
+
+Perhaps it can still be fixed... once its hilt is found.~
+@70011 = ~Kin no Kemono~
+@70012 = ~These bracers were created in Kozakura. They are warm to the touch and while quite light, they feel quire durable. Enchanted by a powerful priestess named Ume after the sweetest of Kozakuran fruits, they may help in keeping the mind clear and in balance, even when anger tries to take control over the monk. They may also help the one that wears these bracers during the fight by guiding their strikes.
+
+STATISTICS:
+
+Melee THAC0: +2
+Protection from Berserk
+Weight: 1
+Usable By:
+ Monks~
+@70013 = ~Saiai no Hito~
+@70014 = ~This sword is known as Saiai no Hito. It was created by Ne Kurosuna, a former member of Saku Monastery. He was one of the original members of the monastery and he trained there for years. He was known for his keen mind and graceful techniques. He was also quite strong, probably one of the strongest monks among other members of the Saku Monastery while he was still there.
+
+In the tenth year of his work, he started to develop romantic feelings for Shiroume Yakuchi, another monk from the same Monastery. While he could be called a master of discipline, body and strategy, he wasn't ready for this, as Ne lost his previous beloved to bandits that killed killed him. He never expected to develop such feelings again, and surely not to someone from the same monastery. That made him feel uneasy, torn between past love and the newly found one. He wasn't sure if he should ever tell Shiroume about his feelings. What if the man could never return these feelings? Would that change their friendship? And would that be a betrayal of his former loved one?
+
+After few months, he decided that if he is to understand these feelings and decide what to do, he needed to leave the Monastery and ponder, pray for answers and enlightenment in solitude. As he liked to meditate through work, he started creating swords. Eventually, that lead him to the creation of this sword: Saiai no Hito. It was supposed to be a gift to Shiroume as Ne decided that peace can only be achieved by honesty. He hoped that... perhaps Master Yakuchi would understand, give them a chance or at least help them remain friends. Ne decided that would be a betrayal to his former love. He still respected his past. He still remembered it.
+
+Saiai no Hito was supposed to be a symbol of love, companionship and enlightenment. However, Ne Kurosuna was killed on his way to the Monastery. The blade was then lost and it's hard to say how it... or rather its parts ended up on the Sword Coast, but it is there, where the blade was reforged and restored to its former glory.
+
+The magic held by this sword was to help those that wield it, providing a great advantage in battle. If tales are to be believed it was also supposed to protect the heart of the monk from ever being crushed or broken.
+
+STATISTICS:
+
+Charge ability:
+– Once per day, if activated and held by a monk, the character will gain +1 attack per round as well as +10% crushing resistance for the next 3 turns.
+
+Combat abilities:
+– Strikes as a +3 weapon
+
+THAC0: +1 bonus
+Damage:  1D10 +1
+Special:  +1 Fire damage
+Damage type:  slashing
+Weight:  5
+Speed Factor: 3
+Proficiency Type: Katana
+Type:  1-handed
+Requires: 6 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@70015 = ~Inoshishi's Mane~
+@70016 = ~This ring is known as Inoshishi's Mane. Those familiar with the Kozakuran language know that Inoshishi means "wild boar".
+
+STATISTICS:
+
+Armor Class Bonus:  +1 vs. crushing weapons~
+@70017 = ~Adventurer! It's good to see someone like myself here: one that knows the way of discipline. I am Inoshishi. Inoshishi of Dojyu. A member of the Saku Monastery.~
+@70018 = ~One like yourself?~
+@70019 = ~How do you know we have anything in common, Inoshishi?~
+@70020 = ~Pleased to meet you, Inoshishi.~
+@70021 = ~One that knows the strength that comes from balance and discipline. I've been following the path of unarmed combat for quite a while, as well as the control over my muscles and power. I do not know if we share all the same traits, but there are signs that you know the discipline I am speaking of.~
+@70022 = ~Likewise. And the fact that you seem to know what sort of discipline I speak of makes my heart grow fonder. Learning it, practicing unarmed combat and keeping my mind keep and calm is an important part of my life.~
+@70023 = ~I came here from the far lands of Kara-Tur. Kozakura, to be more precise. I came here with a mission, but I must admit that I feel quite lost. This... Sword Coast is quite different than where I come from, so the work that brought me here takes more time than I have anticipated.~
+@70024 = ~What kind of work brought you here, Inoshishi? What is this mission you're speaking of?~
+@70025 = ~Look, I care little about you and your mission. I am quite busy myself. Be so kind and get out of my way.~
+@70026 = ~I came here in search of a powerful blade. A katana known as Saiai no Hito. It was forged by one of the first, original members of our monastery, a man named Ne Kurosuna. If our documents are accurate, he resigned from his position and left our brotherhood. Some say it was when he fell in love with another brother, Shiroume Yakuchi. We know that their relationship made Ne feel uneasy, as he lost his beloved before to a group of bandits...~
+@70027 = ~From what we understand, he wanted to meditate on his past, present and future. We believe he felt unprepared for the feelings that returned to him and he felt as if he was betraying the memory of his long lost love. We found his journal and learned he felt torn between different loves and different paths.~
+@70028 = ~This feeling must have made him feel quite conflicted, considering it made him leave the monastery.~
+@70029 = ~Hah! It's good to know men can also confuse themselves with their ideas and feelings and it's not always us who are left confused! Humph!~
+@70030 = ~Ah, both heart and fear can take us to the strangest of places, doesn't it? Heh.~
+@70031 = ~I c-can sympathize with him and the need t-to understand what's going on inside you. Especially when s-such feelings are involved and we have t-to d-decide what to do about them. If we want t-to confess them.~
+@70032 = ~Sometimes it's quite easy to lose one's way when passion is involved. That is why it's always best to keep in mind what exactly you want. And how much you really need it, of course.~
+@70033 = ~His meditation was often through work. He built a forge and became a swordmaker. He Some say he wanted to imprint his questions, doubts and hopes in the swords he made. That lead him to the creation of Saiai no Hito, the blade I told you about.~
+@70034 = ~You must be wondering why I'm telling you all of this.~
+@70035 = ~I believe you have a reason to share this story with me.~
+@70036 = ~Indeed, I'm wondering where are you getting with this... somewhat boring story.~
+@70037 = ~Look. I care little about this blade, your story and why you're here. Go and bother someone else, will you? I need to go.~
+@70038 = ~You see, this story was lost for quite a long time and we somehow... pondered what to do about the story of brother Ne. We decided that we should find the blade and place it among the artifacts of our monastery, among other symbols of dedication. It deserves to be there. It should be there. Brother Ne dedicated himself to understanding his hopes, his love.~
+@70039 = ~The problem is that he is now long gone. And so is his forge. What's more, we found out that someone eventually stole the blade, one that was to become a gift to the one he loved. We tried to trace its story, find out where it might be. We found out it left Kozakura, Kara-Tur and was brought here, to the Sword Coast.~
+@70040 = ~Quite a journey that must have been. I somewhat understand how many troubles it might have involved.~
+@70041 = ~But... Kozakura is sooo far away! It is, isn't it? Not sure how ANYONE could have went that far. Unless they knew how to open some portal, maybe? That would be WAY more comfortable. Well, they must have known how to open one; that's the only way it would make any sense!~
+@70042 = ~So much talking! And it's not even about Tiax! Make it short, just say what you need and let us decline him the help he needs!~
+@70043 = ~*sigh* Is he really going to ask us for help finding this blade? It feels like something quite impossible to do.~
+@70044 = ~This is my mission. To find the blade and travel with it back to Saku Monastery.~
+@70045 = ~That sounds like a difficult mission.~
+@70046 = ~Hah! Good luck with that! It sounds like something impossible to do!~
+@70047 = ~Do what you must, it does not concern me. Actually, I already spent too much time on you and your stories. I need to go. Goodbye.~
+@70048 = ~It is. But I do believe I can succeed in restoring this blade.~
+@70049 = ~It may sound like something impossible to do, but I believe I may succeed if I remain vigilant and mindful.~
+@70050 = ~But... now that I think of it, it doesn't mean I need to do it on my own. Would you like to help me with my mission? I promise to provide you with a reward for this. For your aid.~
+@70051 = ~Ah, "reward". That's the key word I've been waiting for.~
+@70052 = ~Just think about this. Perhaps we could both benefit from this?~
+@70053 = ~It sounds like an important mission. As you said, we share some similar traits and leaving you without any help would feel wrong. Tell me what to do. What do you need from me?~
+@70054 = ~I care little about you, your gold, your traditions and some stupid blade. Sorry, but you're on your own. Besides, I really need to go. Goodbye.~
+@70055 = ~Oh, thank you! Thank you so much!~
+@70056 = ~You see, I came to the Friendly Arm Inn for a reason. Not long ago, I was attacked by a woman, a thug. She took some of my belongings. I need to renew some of my supplies. I also heard there is a temple here, one dedicated to wisdom. I thought I would see if the one that's working there may be of help.~
+@70057 = ~Now, that we are to join forces, I think we should talk to that person together. So let's meet in the temple and see if it's going to help us learn more about where we should be looking for the katana.~
+@70058 = ~I'll wait for you in the temple. Please, join me there.~
+@70059 = ~I see. You are one of the selfish ones. Fine. I will trouble you no more.~
+@70060 = ~Ah, you're here! Good. Let's see if we can find out anything about the whereabouts of the swords.~
+@70061 = ~Well, with some like minds mayhap we can get a hint. 'Tis clearly of great importance for our new friend.~
+@70062 = ~Let's keep optimistic. What's lost, can always be found! Or... most of the times, at least!~
+@70063 = ~Wisdom! Ah, it's always best to dig it directly from the skull! But I see no skulls to dig. A pity, that could be nice. Nicer than this. Ha!~
+@70064 = ~Hmm, this blade must be really important for him, no? I gave up after three days when ya misplaced my book back two years ago! Anyway, let's see if we'll find out anything useful, right?~
+@70065 = ~Excuse me, priestess. I'm in need your guidance.~
+@70066 = ~Guidance, hmm? Tell me more, young man, and who knows, perhaps I will offer you an honest word or two.~
+@70067 = ~I came here in search of an old sword, Saiai no Hito. Sadly, to no avail. The Sword Coast isn't a small place and I may need some help. I have another pair of eyes with me, but we would need to know the direction in which we should look. I hoped that perhaps someone from the Temple of Wisdom could help us find that crucial detail.~
+@70068 = ~Looking at you, you must have traveled quite a bit already, no, boy?~
+@70069 = ~Let Gellana help you a bit. I will require two hundred gold pieces and something that would help link me with that sword you're seeking. Do you have anything like that?~
+@70070 = ~I...~
+@70071 = ~Do you?~
+@70072 = ~Don't tell me you've got nothing that would help...~
+@70073 = ~I mentioned that I've been robbed. I had an amulet that my brothers and sisters believe was once part of the sword, in its hilt. But that amulet was one of the things that were taken from me.~
+@70074 = ~I am sorry, but I'll need that part to cast the spell for you, boy.~
+@70075 = ~I... I understand. But maybe that's not too late. Perhaps that thug can still be found. I still have some gold, my friend, I can pay for the spell, so it's just a matter of finding the person that attacked me.~
+@70076 = ~But that's also what I'd call "the hard part", Inoshishi.~
+@70077 = ~Well... we can try to find her, but I don't know if we're going to succeed...~
+@70078 = ~This is ridiculous. You know what? You're on your own. Go and look for that woman yourself. I resign.~
+@70079 = ~You are clearly more experienced in this. Could you try to get that amulet? Please.~
+@70080 = ~I'll try.~
+@70081 = ~Argh... Fine...~
+@70082 = ~No. I don't have time for this.~
+@70083 = ~You know what? I think I made a mistake. You are on your own. Goodbye.~
+@70084 = ~Thank you, my friend.~
+@70085 = ~I was robbed on the way here from the town south from it. I think they call it... Beregost...?~
+@70086 = ~Perhaps it's her usual "hunting ground". Perhaps she's still somewhere there?~
+@70087 = ~Please, check that for me, and let me know what you find.~
+@70088 = ~I thought you'd really help me, but it looks like I was wrong.~
+@70089 = ~Well, well, well! Who do we have here! People usually take the path below and I really like to observe them. You know, sometimes when their bags are too heavy, I can help them by taking some of that "burden", hahaha!~
+@70090 = ~You must be the one that attacked Inoshishi.~
+@70091 = ~What a coincidence! I just love taking things others have stolen. You look like that sort of thief.~
+@70092 = ~The foreigner? He was an easy prey.~
+@70093 = ~I usually attack from above, but it doesn't mean I cannot defend myself without that advantage.~
+@70094 = ~Come. Show me what you've got!~
+@70095 = ~Have you managed to retrieve the amulet?~
+@70096 = ~Yes. Here it is.~
+@70097 = ~I'm working on this.~
+@70098 = ~You found her?! That's amazing! Thank you so much!~
+@70099 = ~Now we've got everything we needed and Madam Gellana should be able to help us. Am I correct?~
+@70100 = ~I think so. Ah, it's been a while since anyone called me "madam", haha! Come here now. Show me this amulet.~
+@70101 = ~Of course, here it is.~
+@70102 = ~And? Have you found anything Madam Gellana?~
+@70103 = ~I... I think I've got something, but it's quite unusual! It looks like this sword of yours was broken into two parts.~
+@70104 = ~What?! How?!~
+@70105 = ~Well, that's the sort of question I cannot help you with.~
+@70106 = ~But do you know where these parts are? Where should we look for them?~
+@70107 = ~I've seen something, yes. Short glimpses or sensations of... places.~
+@70108 = ~One of them was some sort of tower. With a light. It might have been a lighthouse. I heard water, but also some voices. It's hard to know if they were ghosts, or... maybe just people.~
+@70109 = ~And the second one?~
+@70110 = ~The second one was quite different. The other one was held by some... meaty sack. I think it might have been swallowed by some monster. I am unsure how it's possible, but even though... it's inside, the creature is still alive. It must be a monster that can heal itself, or resist even internal cuts.~
+@70111 = ~The creature was in some rocky area. There were rocks. Sands. I felt everything was quite dry. But that's the all I know.~
+@70112 = ~I am unsure if that's enough, but that's all I saw, boy.~
+@70113 = ~It's more than we had. Thank you.~
+@70114 = ~You're welcome.~
+@70115 = ~Come, my friend. Let's talk outside.~
+@70116 = ~Well, it could be better. And it could have been worse.~
+@70117 = ~I think you're more familiar with the Sword Coast, so all I can ask you to do is to keep your eyes open. I don't know how many lighthouses are there, but I presume more than one. And the creature she mentioned... in a dry rocky area. That's not very specific but maybe you've seen such a place?~
+@70118 = ~I'll study the map, ask around. Meanwhile, when you are around places that match these descriptions, please, investigate them. That's all I ask.~
+@70119 = ~Of course. I'm not leaving you now. I'll let you know if I find these sword parts.~
+@70120 = ~I am done helping you. Sorry, but you're on your own. Goodbye.~
+@70121 = ~Thank you! I'm truly grateful!~
+@70122 = ~I thought you'd help me, but... never mind. I will trouble you no more!~
+@70123 = ~Have you found what we are looking for?~
+@70124 = ~I found the hilt of the sword!~
+@70125 = ~I found the blade of the sword!~
+@70126 = ~No, not yet.~
+@70127 = ~I'm so glad! Let me take a look at it...~
+@70128 = ~Really?! Are you for real? Let me take a look at it...~
+@70129 = ~Yes! That's part of Saiai no Hito!~
+@70130 = ~We still need the other part, but we're on the right path.~
+@70131 = ~Let me know if you find the second part of the sword.~
+@70132 = ~Yes! That's part of Saiai no Hito! The blade!~
+@70133 = ~I'm so glad you found this part. But that's not the end of our treasure hunting.~
+@70134 = ~Let me know if you find the second part of the sword, the hilt.~
+@70135 = ~Oh, glorious day! It looks like we have both parts of the sword!~
+@70136 = ~Now, we need to fix it! It must be made whole again. And I know exactly who to ask.~
+@70137 = ~When I was in Beregost, I talked to the blacksmith out there. He's very skilled and I believe he may be able to fix this sword.~
+@70138 = ~Get the Starfell Whetstone and meet me in Beregost. I presume you may need to rest first, but when you're done and ready, meet me at his forge, in the town. Please, don't make me wait too long for you, though.~
+@70139 = ~...ah, that could be worth something...~
+@70140 = ~Wait! Who are you? You want to take my treasures!~
+@70141 = ~I'm just looking for a sword part, I was told it may be near some lighthouse, so I thought I'd check if it's here.~
+@70142 = ~Yes, that is exactly why I'm here.~
+@70143 = ~It's mine! It's all mine!~
+@70144 = ~Hmm, it looks like the blacksmith isn't here. Let's return to him during his working hours.~
+@70145 = ~It's good to see you friend! Now, we have both parts of the sword and we're here and... I'll do the talking, I hope you don't mind.~
+@70146 = ~Excuse me, master blacksmith. I'd like to ask you a question.~
+@70147 = ~Sure, what you need?~
+@70148 = ~I have this katana here. One that has been shattered, from the looks of it, and I was hoping that maybe you could fix it.~
+@70149 = ~Let's see what you've got here...~
+@70150 = ~Hmm, it looks like it broke, yes, and... it's not a new sword, but it sure does look good. Someone must 'ave put a lot of work to make it.~
+@70151 = ~Do you think it can be fixed?~
+@70152 = ~Hmm, maybe. But katanas are quite different to what I usually make, one needs to be really careful to keep them perfect.~
+@70153 = ~You look like someone that could succeed in this task.~
+@70154 = ~Hah! Maybe! But that's going to take me a moment. Plus, it won't be cheap. 1,200 gold pieces. I'd normally take more, but it looks like this blade's important for you. It will take me four days to fix it.~
+@70155 = ~I have 1,000...~
+@70156 = ~It's 1,200, sorry. There are problems with iron as well as th' prices aren't getting lower in general. People want their blades to be fine and sharp and tha' takes time.~
+@70157 = ~Here. The 200 gold pieces you need.~
+@70158 = ~Sorry, but I'm not spending my gold on this, Inoshishi.~
+@70159 = ~Sorry, I'd help you, Inoshishi, but I don't have that much gold..~
+@70160 = ~Thank you, my friend. You are truly the best help I could get.~
+@70161 = ~Right. Return t' me in four days. It should be ready by then.~
+@70162 = ~Thank you, of course. I'll wait for you, <CHARNAME>, so you could come and see the blade in it's restored glory. Four days, and my mission will be over.~
+@70163 = ~I... I'll give you my signet.~
+@70164 = ~Thanks. Sorry, but I too have expenses.~
+@70165 = ~I understand.~
+@70166 = ~Right. Return t' me in four days. Your blade should be fixed by then.~
+@70167 = ~Thank you. I'll wait for you, <CHARNAME>, so you could come and see the blade in its restored glory. Four days, and my mission will be over.~
+@70168 = ~Hmm, it looks like our friend isn't here right now. Let's meet him once during his work hours.~
+@70169 = ~You're here! Master blacksmith, have you managed to fix the blade we brought you?~
+@70170 = ~It wasn't an easy task, but aye, it's 'ere.~
+@70171 = ~Just look at this! Such an amazing work! You did well!~
+@70172 = ~Hah! That's the only way I do things. I mean. I want them in a good shape.~
+@70173 = ~It's amazing! Thank you!~
+@70174 = ~Come, my friend! Let's leave and I'll let you see the blade in some natural light.~
+@70175 = ~Just look at this blade. Oh, it's magnificent! And it wouldn't be possible if it wasn't for your help.~
+@70176 = ~Saiai no Hito is part of our history, just as Ne Kurosuna. His story, though tragic in a way, can also inspire others. He truly found his love and even though... he died before he could stand face to face with Shiroume and find out if he feels the same, he can still be remembered for his dedication and the path of understanding his feelings.~
+@70177 = ~Thank you. Now you're also part of this story. And I suppose it's also the moment to reward you.~
+@70178 = ~I have magic bracers for you, but... you also helped me pay for reparing the sword, so I've decided to also give you my signet. It's not powerful, but perhaps it will be of use for you.~
+@70179 = ~I have magic bracers for you. They are quite powerful and perhaps they will help you on your adventures.~
+@70180 = ~You were a great help on this mission so let me also say this once again: thank you.~
+@70181 = ~I am truly grateful for this. Take the blade to your monastery and let the story of Ne Kurosuna live forever.~
+@70182 = ~I understand this sword is part of your monastery's past, but I'm going to need it if I'm to succeed on my own mission. Gorion, the man that took care of me is dead. But I'm not going to join him and I know there are people who are going to try to destroy me.~
+@70183 = ~I am sorry, but there was a different reason I was helping you. I'm going to take this sword. Even if I have to kill you.~
+@70184 = ~That's the plan.~
+@70185 = ~Thank you for everything. I'll never forget what you did and how you helped me, <PRO_BROTHERSISTER>.~
+@70186 = ~I... what? I... I'm sorry, but I cannot just give you this sword.~
+@70187 = ~Ne was a man of passion. Of hope. And I need hope right now. I promise I will use this sword with respect. I will use it the way Shiroume Yakuchi would. This is a matter of life and death, so... please. Let this sword be the symbol not just love, but also hope.~
+@70188 = ~I understand. And I suppose you're right I just cannot take it like that. Please, take it to your monastery. Let the story of Ne Kurosuna live forever.~
+@70189 = ~I am sorry, but I need this katana. I'm going to take this sword. Even if I have to kill you.~
+@70190 = ~I... Gods, this is for real, isn't it? You really need that sword to survive this? I don't know why, but when I look at you, I feel... I feel that what you're saying is truth.~
+@70191 = ~Take it. I will lie to my brothers and sisters, but I want you to use it well. Make its story live. Make the story of Ne Kurosuna live with you, through your stories, through this sword.~
+@70192 = ~Please, promise me that.~
+@70193 = ~I promise.~
+@70194 = ~I think I'll just kill you and get the sword from your dead body.~
+@70195 = ~...~
+@70196 = ~Here. But never break this promise. And never let this sword break again.~
+@70197 = ~You... you're joking, right? Hah! You almost got me.~
+@70198 = ~Of course I'm joking. Please, take it to your monastery. Let the story of Ne Kurosuna live forever.~
+@70199 = ~I'm not joking. I need this blade. I think I'll just kill you and get the sword from your dead body.~
+@70200 = ~I'm sorry, but I cannot let that happen!~
+@70201 = ~Restoring Saiai no Hito~
+@70202 = ~Restoring Saiai no Hito
+
+I was accosted by some ragged foreigner at the Friendly Arms Inn and promptly told him to be off.~
+@70203 = ~Restoring Saiai no Hito
+
+I have agreed to help Inoshishi, a traveler to the sword coast, who is looking to recover Saiai no Hito, a blade of some import to his order.~
+@70204 = ~Restoring Saiai no Hito
+
+Inoshishi was robbed, somewhere between here and Beregost, of an amulet. He's asked us to track down the bandit and return his amulet to him at the Temple of Wisdom.~
+@70205 = ~Restoring Saiai no Hito
+
+I have found Inoshishi's bandit and recovered his amulet. I should return to him at the Temple of Wisdom.~
+@70206 = ~Restoring Saiai no Hito
+
+Inoshishi's tasks were going nowhere fast, and I have better things to do. I have told him so, and now I can turn my time to more productive ends.~
+@70207 = ~Restoring Saiai no Hito
+
+Gallena's divination has revealed that the blade has been broken into two parts. One is near a lighthouse, and the other is in the belly of a beast near a rocky area.~
+@70208 = ~Restoring Saiai no Hito
+
+I have recovered the sword hilt from a scavenger in Ulgoth's Beard. I still need to find the other part, which is in the belly of a beast near a rocky area.~
+@70209 = ~Restoring Saiai no Hito
+
+I have recovered the sword blade from the belly of a troll. I still need to find the other part, which is near a lighthouse.~
+@70210 = ~Restoring Saiai no Hito
+
+I have recovered both parts of the blade. I should return to Inoshishi, who is waiting for me outside of the Temple of Wisdom.~
+@70211 = ~Restoring Saiai no Hito
+
+I have recovered both parts of the blade and given them to Inoshishi. He has gone ahead to Beregost, where he'll be waiting at the Thunderhammer Smithy. I need to travel to the Nashkel Carnival and find a Starfell Whetstone.~
+@70212 = ~Restoring Saiai no Hito
+
+I met Inoshishi but the Smithy was closed. I'll return when it's open.~
+@70213 = ~Restoring Saiai no Hito
+
+Taerom has taken the commission to reforge Saiai no Hito, though Inoshishi had to throw in his signet ring to pay for it. I should return in four days when it's ready.~
+@70214 = ~Restoring Saiai no Hito
+
+Taerom has taken the commission to reforge Saiai no Hito, though we had to help pay for it. I should return in four days when it's ready.~
+@70215 = ~Restoring Saiai no Hito
+
+I went to meet Inoshishi to see the reforged blade, but the Smithy was closed. I'll return when it's open.~
+@70216 = ~Restoring Saiai no Hito
+
+I have helped Inoshishi restore Saiai no Hito to its former glory. He has rewarded me for my help, and has left for home.~
+@70217 = ~Restoring Saiai no Hito
+
+I have helped Inoshishi restore Saiai no Hito to its former glory. I convinced him that we had need of the blade to restore peace to the Sword Coast, and have promised we will return the blade one day.~
+@70218 = ~Restoring Saiai no Hito
+
+I have helped Inoshishi restore Saiai no Hito to its former glory. He tried to repay me with paltry trinkets, but I demanded the blade itself.~
+@70219 = ~And he always helped his other brothers. He then fell in love with one of ours and while I do not understand how it must have felt, to be torn between old and newly felt love, and the questions if his feelings would be returned, I read the documents and I know he was an honest and a strong man and he should be remembered, just as his love should be with him.~
+@70220 = ~Starfell Whetstone~
+@70221 = ~Starfell Whetstone is an uncommon alchemical compound, known for its startling azure color.
+
+STATISTICS:
+
+Weight: 5~
+@70222 = ~I am looking for something: a starfell whetstone. I heard someone here may have it.~
+@70223 = ~Sorry, but ain't me. Ye may need to look somewhere else.~
+@70224 = ~I've seen it before, but back in Athkatla. Sorry, but I don't have anything like that.~
+@70225 = ~That's a rare thing! Maybe someone around has such whetstone, but that's not me, sorry.~
+@70226 = ~I heard someone here ordered ankheg shells! I've got them right here.~
+@70227 = ~Well, I do 'ave such a whetstone, if ya need it, but I'll need somethin' in exchange for it.~ 
+@70228 = ~Ya see, I heard 'bout these armors from ankhegs. And I thought I'd try to make such armor myself when the carnival is over an' I'm back home. Well, with some help from my trusted blacksmith, Cromwell.~ 
+@70229 = ~Bu' I'll be needin' some material for that. Five ankheg shells. Bring me those an' I'll give ya th' whetstone for them. That's a fair offer, trust me. Starfell ore is really rare!~
+@70230 = ~Ya've really got 'em? Ya surely know how to surprise others. In a good way, of course!~ 
+@70231 = ~'Ere, the whetstone ya need. And I'll be takin' these shells. And... how now I'll need to figure out 'ow on Nine Hells I'm goin' to get them back south.~
+@70232 = ~Thanks for this! Remember I need five of 'em.~
+@70233 = ~I'm sure he'll need a Starfell Whetstone. Wile you've been getting the parts of the sword back, I've asked around, and I believe there's one at the Nashkel Carnival.~
+@70234 = ~I have also acquired this rare Starfell Whetstone for you to use.~
+@70235 = ~Restoring Saiai no Hito
+
+The armor merchant at the Nashkel Carnival has a Starfell Whetstone, but he wants to try his hand at making armor from ankheg shells. He is willing to trade the Whetstone for five shells.~
+@70236 = ~Now we mostly need to wait. Before you go, there is something I would like to offer you.~
+@70237 = ~It's been a while since I trained with my brothers and sisters. That made me realize, that perhaps before you return to your other missions, perhaps you'd like to spar with me, <PRO_BROTHERSISTER>?~
+@70238 = ~I suppose I could use a fine training session. Yes. I think I can do that, Inoshishi.~
+@70239 = ~I am sorry, but I don't have time for this. We shall meet again once the blade is fixed. See you until then.~
+@70240 = ~I'm glad! Now, let's find the right place for that.~
+@70241 = ~I understand, of course. It looks like you are a busy <PRO_MANWOMAN>. I'll meet you here when the blade's in one piece again.~
+@70242 = ~This looks like the right place for this. So, my <PRO_BROTHERSISTER>, if you're ready, we should begin!~
+@70243 = ~Well... I... I think that was quite a session! You must have fought many battles...! Your fighting technique is quite... remarkable! Excuse me, I think I need to catch a breath!~
+@70244 = ~It's good I have my water skin here. You can have some, if you're thirsty.~
+@70245 = ~Where have you been growing up again? On a battlefield, heh?~
+@70246 = ~It was actually more like a... library.~
+@70247 = ~No, not really. But I always felt that I need to be prepared for anything. And that I want to be in control of both my powers and weaknesses.~
+@70248 = ~That's none of your business. We were to spar, not exchange personal information.~
+@70249 = ~A library? That's quite hard to believe! But then again, you have no reason to lie. Ach, and I thought that Inoshishi was always quite good for his age and the time he spent working on his balance and strength!~
+@70250 = ~You clearly know what you're doing. Ach, and I thought that Inoshishi was always quite good for his age and the time he spent working on his balance and strength!~
+@70251 = ~Right. I'm sorry, I didn't mean to be nosy.~
+@70252 = ~This session reminded me how it felt back in Saku Monastery. The training sessions, the meditations. I miss them just as much as I miss the air, the incense and the evenings after a fine day, meditating as the sun crosses the line of the horizon and the moon rises.~
+@70253 = ~Many may think that life in a monastery is boring, but it comes with much joy and confidence and the feeling of purpose.~
+@70254 = ~What do you mean?~
+@70255 = ~Look, that's all very nice, but I need to go. Thank you for this training session. We'll meet again at the forge when the blade's fixed, in the couple of days.~
+@70256 = ~I once heard some people speaking that we waste our time on pointless contemplation and discipline, while we could truly enjoy our life by being free. But our life at the Monastery is what I consider freedom. It is there I was prepared for this mission. It is there that I understood myself better. And it was there that I was taught how to defend myself if anything goes wrong.~
+@70257 = ~This is a kind of freedom. Or at least a way that may lead me to it.~
+@70258 = ~I suppose all of us need to find their own way to freedom. And it truly sounds like your have found your way, my friend.~
+@70259 = ~You said you were prepared for your mission there, yet I am the one that's doing most of the work. No, what you are speaking of isn't freedom. It's a cage. One made of gold and peace, but still a cage.~
+@70260 = ~I don't know this monastery of yours and I don't think I'm interested in such conversations. Actually, I think it's time for me to move on. We'll meet again at the forge when the blade's fixed, in the couple of days.~
+@70261 = ~Those people you heard: they simply walk a different path. They listen to a different calling.~
+@70262 = ~I suppose I have.~
+@70263 = ~I don't think I agree, but I will surely think about what you said, my friends. Even if only to understand WHY you said it. Thank you.~
+@70264 = ~Mmm. I suppose you're right. I shouldn't feel angry about it and perhaps what you said will let me leave their words behind me.~
+@70265 = ~...~
+@70266 = ~I think we walk an interesting path, you and me. One of that requires both discipline and... and readiness to face questions that may challenge our minds and souls. I was presented my quest, and that makes me wonder if you were already presented yours. Or if it's just a prelude to something greater, these things you're facing right now. But...~
+@70267 = ~...I'm sorry. Sometimes I can ask to many questions or speak to many words when someone else just needed to rest for a moment, heh. Well, that's what Sakurachi told me, one of my friends. Hmm, I actually miss her quite a bit.~
+@70268 = ~It's time to stand up, and... agh. Hah! You truly gave me a lesson here, with all those moves I wasn't prepared to see and avoid! It's good I am just as tough as my name may suggest, hahaha!~
+@70269 = ~I'm not sure I understand.~
+@70270 = ~Wait, "Inoshishi" means...~
+@70271 = ~Heh, Inoshishi means nothing else, but a "boar". And I always felt this fondness towards those animals. They are believed to be both strong and resilient. And quite hairy, hah! What can I say, I just have it in my genes.~
+@70272 = ~I thank you for this training my friend. I took enough of your time already. Know that I am also grateful for this chat. You said many things that truly made me think about things.~
+@70273 = ~It's time for some meditations now. We shall meet soon, my <PRO_BROTHERSISTER>, at the forge, when the blade is fixed and ready for its return back home.~
+@70274 = ~I... I see. Well, I won't take any more of your time, then. We shall meet soon, at the forge, when the blade is fixed and ready for its return back home.~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// The Calling - Thief's Quest                      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+@80001 = ~Bdharlan the Simple~
+@80002 = ~Pelerlertiana~
+@80003 = ~Spore Colony~
+@80004 = ~Mysterious Woman~
+@80005 = ~Mallandrea~
+@80006 = ~Xamm~
+@80007 = ~Pelerlertiana's Clearing~
+@80008 = ~Cold Lout +1~
+@80009 = ~This magic club feels cold in touch. It was clearly enchanted to deal additional damage and cause frostbites. There is a little scratched heart cut in the wood, as well as a little note: Lulu + Grong (also scratched). Perhaps the weapon was a made from a branch that was supposed to be a sign of love but... it didn't last. 
+
+STATISTICS:
+
+Combat abilities:
+- Each successful hit has a 75% chance to cause additional 1 cold damage
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 3
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+//@80010 = ~Amulet~
+@80011 = ~That One Stupid Gift~
+@80012 = ~This amulet looks slightly like a different one, known as The One Gift Lost. While they both can help the one that uses it throw powerful fiery missiles, this one is also... cursed and will make it harder for the one that uses it to focus and follow a perfectly clear conversation.
+
+STATISTICS:
+
+Equipped abilities:
+- Intelligence: -2
+- May only be removed with a Remove Curse spell
+
+Charge abilities:
+- Missile Blast
+  Damage: 6d6 fire (Save vs. Spell for half)
+  Range: 50 ft.
+  Area of Effect: 15-ft. radius
+
+Weight: 1~
+//@80013 = ~Dagger~
+@80014 = ~Laughing Old Prune +2~
+@80015 = ~Laughing Old Prunne was created by a green hag from the Sword Coast. It is a powerful weapon, very sharp, very dangerous, but those that use it in fight will also need to get used to its moody nature. While the blade is able to protect its wielder, hold it in a wrong way, be not gentle enough, and she will take some of that protection or even weaken you, if there is nothing else to take. 
+
+STATISTICS:
+
+Equipped abilities:
+- Magic Resistance: +6%
+- May only be removed with a Remove Curse spell
+
+Combat abilities:
+- Each successful hit has a 10% chance to lower your magic resistance by 2% for 3 rounds. That vicious curse is very amusing to this weapon so it will laugh at you each time that happens... what can be also quite annoying and, to be quite frank, really rude
+
+THAC0: +2
+Damage: 1d4+2 (piercing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+//@80016 = ~Ring~
+@80017 = ~Ring of Smelly Feet~
+@80018 = ~This cursed ring is known as Ring of Smelly Feet. It was created by a Sembian bard that waned to make a prank on his friend. He gave him the ring but... some some reason the friend kept wearing it and said he like it quite a bit. A peculiar fellow, that's for sure.
+
+STATISTICS:
+
+Equipped abilities:
+- Charisma: -1
+- Hide in Shadows: -5%
+- May only be removed with a Remove Curse spell
+
+Weight: 0~
+//@80019 = ~Letter~
+@80020 = ~Bdharlan,
+
+I understand you want to join our group. Who knows, perhaps you will fit in. I guess, however, Narlen will like to check if you'd be the right addition. That guy wants to make sure the new ones won't chicken out and will have his back. 
+
+Remember, though! If he approaches you, NEVER question the way he talks. We got used to it, but he's really sensitive when it comes to that. If the two of you work together, perhaps you'll get your first chance to earn a coin or two.
+
+With regards, 
+Friend~
+@80021 = ~Picks~
+@80022 = ~Picks of Mask's Pal~
+@80023 = ~This set of magic picks can surely help all those that want to pick a lock as soon as possibly and get out of... wherever the heist is happening.
+
+STATISTICS:
+
+Charge abilities:
+- May cast Knock once per day
+
+Equipped abilities:
+- Open Locks: +10%
+
+Weight: 0~
+@80024 = ~Take that stupid ants! Haha!~
+@80025 = ~Dammit! It's on my boot! Oh well... hehehe.~
+@80026 = ~Hahaha! Look who came back!~
+@80027 = ~Well, it looks like there are more like me, lucky fellas trying to get into the City of Baldur's Gate! I heard that's a place to start a new life! And earn a coin or two. And I think you know what I mean by "earn".~
+@80028 = ~Perhaps I do. By why would you want to start a new life?~
+@80029 = ~I have no idea what you're talking about. And I don't think I have time for any chit-chats, so... goodbye.~
+@80030 = ~Let's just say I know what does it mean to walk with an empty stomach for a day or two.~
+@80031 = ~But I heard there's a group in the city! I guild and I thought that maybe that's what I need! A group that would watch my back when I do what I do best! But there is a little problem that I need to deal with. One case I'd like to close before I can cross that bridge and enjoy my new life!~
+@80032 = ~What's exactly between your present life and your new life?~
+@80033 = ~Whatever. Look, I do not have time for such chit-chat and... I need to go.~
+@80034 = ~Wait! There's gold. There is so much gold and it can be yours. Just... help me finish something!~
+@80035 = ~And what sort of help you hope to get, hmm? What is this "case" you're speaking of?~
+@80036 = ~I'm not interested. Now get off my way or they'll find your dead body under that bridge over here.~
+@80037 = ~You see, I... encountered this woman and I tried to take something from her. Some food...~
+@80038 = ~...and a wand, it looked expensive...~
+@80039 = ~...and there was this amulet...~
+@80040 = ~...it was right next those golden coins she had near her pillow...~
+@80041 = ~...and I just needed few more things from her, like the pillow itself...~
+@80042 = ~...a new waterskin...~
+@80043 = ~...a healing potion...~
+@80044 = ~...some balm, I have that nasty itch... down there...~
+@80045 = ~...a new comb, I do want to look neat once I'm in Baldur's Gate...~
+@80046 = ~...a pair of scissors, I really need to cut my fingernails...~
+@80047 = ~...I was hoping to maybe find some perfume...~
+@80048 = ~...and I really needed a fresh pair of socks! Mine are as sticky as if I stepped into honey or tree sap.~
+@80049 = ~That's... quite a list!~
+@80050 = ~Socks? Seriously? And seriously... Ew.~
+@80051 = ~If you also stole that underwear from someone else, no wonder you have that rash now.~
+@80052 = ~I don't have time for such nonsense. Sorry, but I need to go.~
+@80053 = ~Hey! No shaming! I've been living in a wild for quite a while and... and I had no other choice! Seriously!~
+@80054 = ~I know I tried to take a lot, but you know how it is. When you're starving you just want to take all you can get just in case things went wrong again. You want to prepare yourself for the worst.~
+@80055 = ~Anyway, I had to run. And I left my bag near that woman's tent and I need it. I really do. So I was hoping that maybe I would meet someone here, someone ready to help. Or someone like me, just more... stealthy.~
+@80056 = ~Eh, fine. If you want I can help you. Just show me the way.~
+@80057 = ~I don't have time for such nonsense. Now, I need to go.~
+@80058 = ~You'll help me? Oh, that's wonderful!~
+@80059 = ~Let me take my things, give me a second to... well, take a leak, and... just get back to me in a moment. And look away, eh? I don't think I need company in that sort of stuff.~
+@80060 = ~Dammit! I'll need to look for someone else, then.~
+@80061 = ~Let me take a leak in peace, hmm? If you wanna look, then sorry, but I'm not into that stuff.~
+@80062 = ~Aaah, my bladder's empty, so we can move on.~
+@80063 = ~Show me the way.~
+@80064 = ~I need a moment. Wait for me here.~
+@80065 = ~Mhm! Follow me.~
+@80066 = ~Ooo, haha! Just look at that one's face! Nicer that what I've seen in days!~
+@80067 = ~Oh, that even rhymes! That's even better! Mmm!~
+@80068 = ~We had a deal so... I present you your gift, hag. I hope you'll accept it.~
+@80069 = ~It looks nice, mhm. But I suppose I should also check <PRO_HISHER> teeth, bad teeth and stinky breath aren't really appetizing! Hahaha!~
+@80070 = ~Nah. I think they should be fine.~
+@80071 = ~Now, I got you something in exchange for my own freedom. So free me. I promise I will never again try to steal from you.~
+@80072 = ~Hmm. Maybe I should... if you help me to seize that one over here.~
+@80073 = ~Hey! I was just supposed to bring someone, not fight them!~
+@80074 = ~Serve me, little one, just another while and I'll do what you hearts and mind wasn't right now!~
+@80075 = ~Let me see into your chest and skull and see...! Mhm!~
+@80076 = ~I...~
+@80077 = ~You want it to stop itching! Hahaha! Good! I can help with that! The itching of your... branch shall end in a blink of an eye! My eye, of course, hahahaha!~
+@80078 = ~We have a deal.~
+@80079 = ~Seriously? You just sold me and agreed to seize me so your privates would stop itching? That's really low.~
+@80080 = ~If you think you will be able to stop me or even come near me, you are even more stupid than I thought.~
+@80081 = ~Please, don't do this! You don't have to serve that hag!~
+@80082 = ~Sorry, but I guess the deal's made and my affliction is getting worse.~
+@80083 = ~Come hag, let's get them!~
+@80084 = ~So, you did pretty good with Narlen, and I am sure Alatos would happily use you in a job or two, but there are also others that would gladly work with you. And by "others" I mean... myself, of course.~
+@80085 = ~Narlen's job was a low rank chore, but I can offer you more than just that. One more mission, nothing else, so I won't take much of your time. But it won't be easy.~
+@80086 = ~If you pay well, then I'm interested.~
+@80087 = ~Sorry, I'm not interested. Last time I tried to help someone like you, I was attacked by a green hag.~
+@80088 = ~Of course I do.~
+@80089 = ~You see, I need someone gone. And I don't care how it happens. Kill him, make him skip towns... I don't really care.~
+@80090 = ~Who is that man you want gone?~
+@80091 = ~I... think I changed my mind. Sorry, but I'm not interested in such job.~
+@80092 = ~A man. A Flaming Fist member. Xamm. He's been sleeping with my friend. She fell for his stupid charm. He's also sleeping with half of this damn city. He broke hearts of many girls. And I really don't get him why the rest, regardless of sex, wealth and education still believe he's worth any attention.~
+@80093 = ~I care little about others, but my friend... she deserves some healing. She really does.~
+@80094 = ~Why won't you deal with him on your own.~
+@80095 = ~He sounds like a dog that knows more than just one trick, haha! But... if you pay, I can deal with him.~
+@80096 = ~He sounds like quite a jerk. I'll happily help you and make him leave Baldur's Gate.~
+@80097 = ~Sorry, but I'm not interested.~
+@80098 = ~Because I made a stupid promise that I won't try to confront him. That's why I need you.~
+@80099 = ~I see. Heh, he sounds like a dog that knows more than just one trick! But... if you pay, I can deal with him.~
+@80100 = ~I understand. He sounds like quite a jerk. I'll happily help you and make him leave Baldur's Gate.~
+@80101 = ~Mhm. Sorry, but I'm not interested. I think you'll need to look for someone else to help you.~
+@80102 = ~I'm glad to hear that!~
+@80103 = ~Now, the tricky part is that he doesn't have a home of his own. He's usually using other girls' places to rest, or taverns. To make it even more challenging, I need to know the job's done in three days. After that, I need to leave the city and I want to know Petunia's fine and will no longer be bother by that fool. But there is someone who may know where to find him.~
+@80104 = ~A family member? A friend? Some Colleague?~
+@80105 = ~You know what? I think I changed my mind. Sorry, but you'll need to work on your own on this.~
+@80106 = ~His friend, Mallandrea.~
+@80107 = ~From what I know, she should be in the Undercellars, right below the Blushing Mermaid.~
+@80108 = ~You managed to work well with Narlen, you helped him steal a thing, hmm? Now, let's see if you can find a target that's on the move.~
+@80109 = ~Remember, three days. I need to leave then and I won't be able to pay you if you don't make it in time. Once it's done, find me near the city gate. I hope you find you there really soon.~
+@80110 = ~Fool Argh! Fine. I'll find someone else! Get out of my way!~
+@80111 = ~Well, well, well! What a nice face you have. Quite kissable.~
+@80112 = ~I'm looking for Mallandrea. Would that be you?~
+@80113 = ~Why don't you come closer and do that, hmm?~
+@80114 = ~I'm not interested in that.~
+@80115 = ~Oh, darling! Sorry, but I'm not in the mood. But I'm sure that if you have a coin or two, it will help persuade some girl or boy, or just whoever you'd like.~
+@80116 = ~Oh! I'm famous! Hah! I didn't know that.~
+@80117 = ~I need to find your friend. He's name is Xamm.~
+@80118 = ~I have this fantasy: I always wanted to have a little fling with member of the Flaming Fist. I heard you know someone like that.~
+@80119 = ~And why would you need to talk to him.~
+@80120 = ~Here is a fee for not asking questions. Three hundred gold pieces. So, where can I find him?~
+@80121 = ~I have this fantasy: I always wanted to have a little fling with member of the Flaming Fist. I heard he's one of them. Who knows, maybe he'd be interested in some tomfoolery?~
+@80122 = ~Tell me where he is or I'll cut you to pieces and then leave one piece in each of Baldur's Gate's taverns.~
+@80123 = ~This is none of your business.~
+@80124 = ~That's... oddly specific. Mmm. I like it. He's always in the mood so fine, I'll tell you where to find him. And I'll hope he'll tell me later about how it went.~
+@80125 = ~Fine! I'll tell you! Just... keep your distance!~
+@80126 = ~Mmm. I like the way you solve your problems. Fine, I'll tell you where to find him.~
+@80127 = ~He decided to take a day off, he's just outside the city, near the river, enjoying some alone time. On the other hand... even his alone time include other people every now and then.~
+@80128 = ~Now excuse me, but I need to go.~
+@80129 = ~I'm sensing trouble! I'll tell you nothing!~
+@80130 = ~How dull. Well, excuse me now, but I'm busy.~
+@80131 = ~Ah, another someone looking for some thrills? A little... something? Sorry, <PRO_BOYGIRL>, I'm pumped out. Quite... literally.~
+@80132 = ~Ah, it sounds like you're the man I've been looking for. The infamous Flaming Fist soldier.~
+@80133 = ~Such a pity, because I thought we would play a bit! But I think I can still have some fun... but you won't like it.~
+@80134 = ~Infamous? Hmm.~
+@80135 = ~I must say I don't like your tone...~
+@80136 = ~Jokes aside: what do you want?~
+@80137 = ~Someone wants you gone. And I feel like I need to vent a bit. I usually vent during a fight.~
+@80138 = ~Someone wants you gone. So, we have two options: I kill you or you take this one hundred gold pieces and you leave and never return.~
+@80139 = ~Someone wants you gone. And... this place you picked is quite convenient. (Try to knock him out and push him into the river.)~
+@80140 = ~Someone wants you gone. Take your things and leave. Please.~
+@80141 = ~Who do you think I am? I do know how to use a sword and I'm not afraid of those like you!~
+@80142 = ~I... I am really in quite some trouble, hmm? Normally I wouldn't believe you, but you wouldn't offer me any gold if that was some bluff.~
+@80143 = ~Fine. I'll just leave. I heard there are many nice girls in Waterdeep.~
+@80144 = ~What...?! I... *splush*~
+@80145 = ~I trust the job is gone.~
+@80146 = ~It is. He's gone.~
+@80147 = ~I'm working on it.~
+@80148 = ~Good! I won't ask pointless questions, I'm satisfied with just the information he won't cause me or my friend any more problems.~
+@80149 = ~Good job. And as I promised, I've got something for you. Five hundred an a little something that someone like you can find pretty useful.~
+@80150 = ~I must say that whoever you're looking for, that someone is in quite some trouble. And don't bother asking me if I heard you're looking for someone. Half of this city is looking for someone or something, and the other half is running from something. That's called life.~
+
+// journal entries
+@80151 = ~Aid for Bdharlan~
+@80152 = ~Aid for Bdharlan
+
+Bdharlan approached me near Wyrm's Crossing with a job, but I wasn't interested.~
+@80153 = ~Aid for Bdharlan
+
+Bdharlan approached me near Wyrm's Crossing with a job and has asked me to follow him... after a personal break.~
+@80154 = ~Aid for Bdharlan
+
+Bdharlan double-crossed me with his hag of a partner, but they underestimated the threat. He and his mistress lie dead and I have some trinkets to show for it.~
+@80155 = ~Aid for Bdharlan
+
+Bdharlan double-crossed me but I fled with my life.~
+@80156 = ~A Job for the Mysterious Woman~
+@80157 = ~A Job for the Mysterious Woman
+
+A woman approached me outside the Thieves Guild in Baldur's Gate. She had heard of my work with Narlen and had a job for me, but I didn't like the feel of it and turned her down.~
+@80158 = ~A Job for the Mysterious Woman
+
+A woman approached me outside the Thieves Guild in Baldur's Gate. She had heard of my work with Narlen and had a job for me to get rid of Xamm, a Flaming Fist, that is bothering her friend. To find him, I should speak to her friend Mallandrea in the Undercellars.
+
+The job must be completed in three days.~
+@80159 = ~A Job for the Mysterious Woman
+
+I spoke to Mallandrea in the Undercellars and she said I can find Xamm near the river just outside the city.~
+@80160 = ~A Job for the Mysterious Woman
+
+I spoke to Mallandrea in the Undercellars but I could not get Xamm's location from her. All I can do now is hope to find him through blind luck.~
+@80161 = ~A Job for the Mysterious Woman
+
+I found Xamm near the river just outside the city gate and dealt with him. I should return to the city and look for the mysterious woman near the inside of the city gate.~
+@80162 = ~A Job for the Mysterious Woman
+
+The mysterious woman has happy that Xamm can no longer bother her friend, and rewarded me for my time.~
+@80163 = ~A Job for the Mysterious Woman
+
+I was unable to locate and deal with Xamm within the requested three days.~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Replace Bandit Scalps with Badges                \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+// this block is straight text replacements for existing durlyle/delainy lines. Any alterations here are for where the
+// dialogue assumes the gender of player1. Numbers at the end are the original bg/bgee string references
+
+@90001 = ~Be not so formal, "m'lady." My name is Delainy, and I am pleasured to meet ye.~ // 22008
+@90002 = ~You need not honor with formality, "m'lord." I am Durlyle, and I am pleasured to meet ye.~ // 22382
+@90003 = ~Please return the cloak to us. I will be very grateful of your kindness. You look a kind <MANWOMAN>.~ // 22453
+@90004 = ~You wish to listen while I speak? There are few of the village that take an interest in history, and I delight in the telling. None are very clear, I fear. We were not concerned with records when first we came. They are... embellished, though with good intent, I am sure. You are welcome to stand a while by me... if you wish, good <MANWOMAN>.~ // 22487
+@90005 = ~It would seem the others were right about outsiders after all. You will not escape this island home, m'lord!~ // 21697
+
+// new name/descript for bandit scalps
+@100001 = ~Bronze Badge~
+@100002 = ~This small bronze badge is attached to a small, fine chain. It was taken off the body of a bandit, and may be of value to the right buyer.~
+// for the rest of these, it's the original lines but the scalp references are changed to bronze badges
+// bgee strref 19466
+@100003 = ~The bandit raids have been getting worse since you returned from Nashkel. I used to think that they were just your usual brigands out to make a quick buck in troubled times, but not anymore. They're working for someone... Damn it, this is a fine mess, isn't it? One way or another, I've got to get my troops back to the Gate! I'll pay 50 gold pieces for every bronze bandit badge you can bring me--and spread the news. Some of the merchants in the region have also decided to pitch in and give money for the bandit badges, but I'll give you the best price. I want this whole region cleared, and I want to know what in the Nine Hells is going on here.~
+// gee strref 19469
+@100004 = ~I have two laws that do extend into your precious personal space, <CHARNAME>: Don't lecture me and don't talk to me of pity... Now let's start again and this time I'll use a language that even you can understand. I'm paying 50 gold pieces for every bronze bandit badge you can give me. Spread the word, too, because I want this region cleared before the snow flies and before something hits the fan, you understand me? Good. Now get out of my sight.~
+// bgee strref 19470
+@100005 = ~My contingent and I are cut off from Baldur's Gate. We haven't received new orders for close to a week and, to be honest, I don't like the feel of this at all. The bandit raids have been getting worse since you returned from Nashkel. I used to think that they were just your usual brigands out to make a quick buck in troubled times, but not anymore. They're working for someone... One way or another, I've got to get my troops back to the Gate. I'll pay 50 gold pieces for every bronze bandit badge you can bring me--and spread the news. I want this whole region cleared before winter comes.~
+// bgee strref 19472
+@100006 = ~You have been busy, I see. Well, keep at it. The more bronze badges I have, the richer you'll be. I'll take all the badges you have.~
+// bgee strref 19703 - also removed the part about it being a bloody business
+@100007 = ~I hope your travels have gone well, <CHARNAME>. Remember, if you want the reward for dead bandits, you have to bring me their badges. I must have some proof.~
+// bgee strref 27501
+@100008 = ~In want of bandit badges.
+Officer Jessa Vai of the Flaming Fist is marooned in Beregost with her contingent. In her desperation to return to Baldur's Gate, she's offered me 50 gp for every bandit badge I can bring her. She'll be waiting for me at the Jovial Juggler Inn.~
+// bgt from chloe's dialogue
+@100009 = ~In want of bandit badges.
+
+A girl named Chloe told us that someone named officer Vai is waiting to speak with us in the Jovial Juggler in Beregost.~
+// bgt final quest entry - also delete last line about tanner/taxidermist
+@100010 = ~In want of bandit badges.
+
+We had a good business on selling bandit badges to officer Jessa Vai of the Flaming Fist, but she has received an order from Baldur's Gate headquarters to return there to make a report on the matter of eliminating the bandit threat.~
+
+// sotsc compat - these were originally @25, 26, 31, 32 in l#plast.tra
+@100011 = ~Hmm, only if you take care of some... weeds. I can give you one flower for every five bronze badges you take from those crude bandits.~
+@100012 = ~I have the badges right here.~
+@100013 = ~Right. Five badges for one of my beautiful flowers. Take good care of it.~
+@100014 = ~...hmm, perhaps I should sell those badges for some compost.~

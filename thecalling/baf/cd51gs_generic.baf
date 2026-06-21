@@ -1,0 +1,64 @@
+IF
+	!GlobalTimerNotExpired("bd_cast","locals")
+	Range(NearestEnemyOf(Myself),30)
+	HaveSpell(CLERIC_BLESS)  // SPPR101.SPL (Bless)
+	!StateCheck(Myself,STATE_BLESS)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("bd_cast","locals",ONE_ROUND)
+		Spell(Myself,CLERIC_BLESS)  // SPPR101.SPL (Bless)
+END
+
+IF
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	HaveSpell(CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+	Range(NearestEnemyOf(Myself),4)
+	%aof_check%
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		Spell(Myself,CLERIC_ARMOR_OF_FAITH)  // SPPR111.SPL (Armor of Faith)
+END
+
+IF
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	HaveSpell(CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+	CheckStatLT(Myself,50,SPELLFAILUREPRIEST)
+	!StateCheck(Myself,STATE_SILENCED)
+	See([GOODCUTOFF])
+	!Class(LastSeenBy(Myself),MONK)
+	!Race(LastSeenBy(Myself),ELF)
+	!StateCheck(LastSeenBy(Myself),STATE_NOT_TARGETABLE) // STATE_NOT_TARGETABLE
+	!StateCheck(LastSeenBy(Myself),STATE_DISABLED) // STATE_DISABLED
+	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+	CheckStatGT(LastSeenBy(Myself),3,SAVEVSSPELL)
+	%charm_check%
+	!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+	!HasItemEquiped("MISC73",LastSeenBy(Myself))  // The Horn of Kazgaroth
+	!HasItemEquiped("HELM06",LastSeenBy(Myself))  // Helm of Charm Protection
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		Spell(LastSeenBy(Myself),CLERIC_CHARM_PERSON)  // SPPR204.SPL (Charm Person or Mammal)
+END
+
+IF
+	!GlobalTimerNotExpired("BD_Cast","LOCALS")
+	See(NearestEnemyOf(Myself))
+  AreaType(OUTDOOR)
+	HaveSpell(CLERIC_CALL_LIGHTNING)  // SPPR302.SPL (Call Lightning)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("BD_Cast","LOCALS",ONE_ROUND)
+		Spell(NearestEnemyOf(Myself),CLERIC_CALL_LIGHTNING)  // SPPR302.SPL (Call Lightning)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+

@@ -1,0 +1,15 @@
+IF
+  NumTimesTalkedTo(0)
+  Global("CDThiefCalling","GLOBAL",5)
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Exists(Myself)
+  !Global("CDThiefCalling","GLOBAL",-2)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END

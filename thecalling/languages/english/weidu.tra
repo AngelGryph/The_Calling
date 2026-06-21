@@ -12,18 +12,38 @@
     @3 = ~This component is not available yet.~
     @4 = ~DLC Merger is required before mods can be installed on this game. Check the readme for more information and a link to download DLC Merger.~
     @5 = ~This component is not available in your language yet.~
+    @6 = ~No Callings installed~
+    @7 = ~This component requires the Enhanced Edition~
+    @8 = ~Calling Quests~
+    @9 = ~Additional Content~
 
-  @100 = ~The Calling~
+  @100 = ~The Calling: Mage - The Cursed Bracers~
   @101 = ~Would you like to install cheats?
 
   a) No cheats; keep it one calling per game
   b) Allow multiple callings but keep class restrictions
   c) Allow multiple callings with no class restrictions~
 
-@10000 = ~Expanded Gnoll Fortress~
+@10000 = ~The Calling: Fighter - Expanded Gnoll Fortress~
 
 @20000 = ~Peaceful Werewolf Isle Resolution~
 
 @30000 = ~The Movanic Cult~
 
 @40000 = ~Exotic Item Pack~
+@40023 = ~Add exotic items~
+@40024 = ~Add exotic items and remove exotic items added by BGEE~
+
+@50000 = ~Make All Calling Quests Open to All Classes~
+
+@60000 = ~The Calling: Shaman - The Dream~
+@60001 = ~Use normal text~
+@60002 = ~Use color in dialogue text~
+
+@70000 = ~The Calling: Monk - Restoring Saiai no Hito~
+
+@80000 = ~The Calling: Thief - The Bargain~
+
+@90000 = ~Same-Sex Durlyle/Delainy Subplot~
+
+@100000 = ~Replace Bandit Scalps with Badges~
