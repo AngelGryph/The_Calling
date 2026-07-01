@@ -686,13 +686,15 @@ END ELSE BEGIN
   INCLUDE ~thecalling/lib/a7_tools.tpa~ // tile2ee
   LAF HANDLE_TILE2EE INT_VAR quality_v1 = 9 STR_VAR input_path = ~thecalling/tilesets/10~ END // new area tilesets/pvrz
   
-  COPY ~thecalling/tilesets/bg5100.mos~     ~override/%GnollStronghold%.mos~ // minimap 
-  COPY ~thecalling/tilesets/bg5100N.mos~     ~override/%GnollStronghold%N.mos~ // minimap 
+  COPY ~thecalling/tilesets/bg5100.mos~  ~override/%GnollStronghold%.mos~  // minimap 
+       ~thecalling/tilesets/bg5100N.mos~ ~override/%GnollStronghold%N.mos~ // minimap 
+       ~thecalling/tbc/bg5100.tbc~       ~weidu_external/thecalling/tbc/%GnollStronghold%.tbc~  // tileset 
+       ~thecalling/tbc/bg5100N.tbc~      ~weidu_external/thecalling/tbc/%GnollStronghold%N.tbc~ // tileset 
   
 //  LAF HANDLE_TILESETS STR_VAR input_path = EVAL ~thecalling/tiz/%tutorbgt%~ END
     LAF HANDLE_TILECONV
 	  STR_VAR
-	    input_path    = EVAL ~%MOD_FOLDER%/tbc~
+	    input_path    = ~weidu_external/thecalling/tbc~
 	    output_path	  = EVAL ~override~
     END
 END
