@@ -191,8 +191,8 @@ END
 
 IF ~~ THEN BEGIN dielikedogs
 SAY @21647 
-IF ~~ THEN DO ~Enemy() ActionOverride("baresh",Enemy())~
-JOURNAL @21648 EXIT END
+  COPY_TRANS "%tutu_var%menda4" 5
+END
 
 IF ~~ THEN BEGIN nosailor
 SAY @21650
@@ -202,8 +202,15 @@ END
 
 IF ~~ THEN BEGIN wontliftgift
 SAY @21651
-IF ~~ THEN DO ~Enemy() ActionOverride("baresh",Enemy())~
-JOURNAL @21648 EXIT END
+  COPY_TRANS "%tutu_var%menda4" 3
+END
+END
+
+ALTER_TRANS "%tutu_var%menda4"
+BEGIN wontliftgift dielikedogs END
+BEGIN END	// Empty transaction list matches all.
+BEGIN
+  "JOURNAL" ~@21648~
 END
 
 REPLACE ~%tutu_var%baresh~
